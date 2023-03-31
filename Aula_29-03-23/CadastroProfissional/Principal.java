@@ -4,61 +4,68 @@ public class Principal{
 		public static void main(String[] args) {
 
 // Inicializa o objeto
-		AdmBanco admBancoUm = new AdmBanco();
-		Programador programadorUm = new Programador();
-
-
+		Animal AnimalUm = new Animal();
+		Animal AnimalDois = new Animal();		
+		Mamifero mamiferoUm = new Mamifero();	
+		Ave AveUm = new Ave();
 
 // Objeto para receber dados atraves do controle
 		Scanner entradaDados = new Scanner(System.in);
 
 
-		System.out.println("------Cadastro Administrador BD-----");
+		System.out.println("------Cadastro de Animais-----");
+		System.out.println("Digite o nome: ");
+		AnimalUm.nome = entradaDados.next();
+		System.out.println("Digite a especie do Animal: ");
+		AnimalUm.especie = entradaDados.next();
 		
-		System.out.println("Digite nome do DBA: ");
-		admBancoUm.nome = entradaDados.next();
-		
-		System.out.println("Digite seu CPF: ");
-		admBancoUm.cpf = entradaDados.next();
-		
-	
-	    System.out.println("Qual tipo de banco de dados administra? ");
-		admBancoUm.tipoDeBancoDeDados = entradaDados.next();
+		System.out.println(AnimalUm.nome);
+		System.out.println(AnimalUm.especie);
 
-// Exibe informações em tela
-        System.out.println("------Informacoes de cadastro dos DBA's-----");			
-		System.out.println("Nome do DBA: "+ admBancoUm.nome);
-		System.out.println("CPF do DBA: "+ admBancoUm.cpf);
-		System.out.println("Linguagem do BD: "+ admBancoUm.tipoDeBancoDeDados);
-
-		System.out.println("************************");
-		
-		
-
-
-
-		System.out.println("------Cadastro Programador-----");
-		
-		System.out.println("Digite nome do Programador: ");
-		programadorUm.nome = entradaDados.next();
-		
-		System.out.println("Digite seu CPF: ");
-		programadorUm.cpf = entradaDados.next();
-		
-	
-	    System.out.println("Em qual linguagem desenvolve? ");
-		programadorUm.linguaguem = entradaDados.next();
-
-// Exibe informações em tela
-        System.out.println("------Informacoes de cadastro dos Programadores-----");		
-		System.out.println("Nome do programdador: "+ programadorUm.nome);
-		System.out.println("CPF do programador: "+ programadorUm.cpf);
-		System.out.println("Linguagem que desenvolve: "+ programadorUm.linguaguem);
 
 		System.out.println("************************");
 
 
-	
+		System.out.println("Digite o nome: ");
+		AnimalDois.nome = entradaDados.next();
+        System.out.println("Digite a especie do Animal: ");
+		AnimalDois.especie = entradaDados.next();
+		
+		System.out.println(AnimalDois.nome);
+		System.out.println(AnimalDois.especie);
+		
+		
+		
+		
+		System.out.println("------Cadastro dos Mamiferos----");
+		
+		System.out.println("Digite o nome: ");
+		mamiferoUm.nome = entradaDados.next();
+		System.out.println("Digite a especie do Animal: ");
+		mamiferoUm.especie = entradaDados.next();
+		System.out.println("Digite a cor do pelo: ");
+		mamiferoUm.corPelo = entradaDados.next();
+		
+		System.out.println(mamiferoUm.nome);
+		System.out.println(mamiferoUm.especie);
+		System.out.println(mamiferoUm.corPelo);
+		
+		
+		
+		
+		System.out.println("------Cadastro de Aves-----");
+		
+		System.out.println("Digite o nome: ");
+		AveUm.nome = entradaDados.next();
+		System.out.println("Digite a especie do Animal: ");
+		AveUm.especie = entradaDados.next();
+		System.out.println("Digite a cor da pena: ");
+		AveUm.corPena = entradaDados.next();
+		
+		System.out.println(AveUm.nome);
+		System.out.println(AveUm.especie);
+		System.out.println(AveUm.corPena);		
+		
 
 		
                 }
