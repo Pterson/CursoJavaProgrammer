@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author ti
- *
- */
-module calcularSalarioLiquidoProfessor {
-}
