@@ -5,30 +5,52 @@ public class SalarioServico {
 	// RETORNA O SALARIO BRUTO
 	public double calSalarioBruto(int qtdHoraTrabalhada, double valorHora) {
 
-		double salarioTemp;
-		salarioTemp = valorHora * qtdHoraTrabalhada;
+		double salarioBTemp = valorHora * qtdHoraTrabalhada;
+		double acrescBonus = 25; // 25% sobre o salario bruto;
+		double porceBonus = acrescBonus /100;
+		double valorBonus = salarioBTemp * porceBonus;
 
-		return salarioTemp;
+		if (qtdHoraTrabalhada > 500) {
+
+			salarioBTemp = salarioBTemp + valorBonus;
+		}
+			
+		return salarioBTemp;
 	}
-
-	// RETORNA BONUS SALARIO
-	public double SalarioBonus(double salBruto, double descontoIr, double salLiquido, double acrescBonus) {
-
-		double porceBonus = acrescBonus / 100;
-		double bonus = salBruto * porceBonus;		
-		double salBonus = bonus + salBruto;
-		salLiquido = salBonus - descontoIr;
-
-		return salLiquido;
-	}
+	
+	
 
 	// RETORNA O SALARIO LIQUIDO
-	public double calSalarioLiquido(double salBruto, double descontoIr) {
+	public double calSalarioLiquido(double salBrutoTemp, double IrSeniorTemp) {
 
-		double porcentagem = descontoIr / 100;
-		double valorDesconto = salBruto * porcentagem;
-		double salLiquido = salBruto - valorDesconto;
+		double porcDescontoTemp = IrSeniorTemp /100;
 
-		return salLiquido;
+		double valorDescontoTemp = salBrutoTemp * porcDescontoTemp;
+		
+		double salLiquidoTemp = salBrutoTemp - valorDescontoTemp;
+
+		return salLiquidoTemp;
 	}
+	
+	
+	// RETORNA VALOR DO BONUS
+		public double calValorBonus(int qtdHoraTrabalhada, double valorHora) {
+
+			double salarioBTemp = valorHora * qtdHoraTrabalhada;
+			double acrescBonus = 25; // 25% sobre o salario bruto;
+			double porceBonus = acrescBonus /100;
+			double valorBonus = salarioBTemp * porceBonus;
+
+	
+			return valorBonus;
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

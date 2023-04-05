@@ -31,11 +31,13 @@ public class Principal {
 
 		System.out.println("Digite o quantidade de horas trabalhadas pelo Professor Senior:");
 		pSenior.qtdHorasTrabalhadas = Integer.parseInt(entradaDeDados.next());
+		
+		
 
 		// VALORES FIXADAS DADOS NO PROBLEMA
 		pSenior.valorHorasTrabalhadas = 100;
 		pSenior.IrSenior = 10;
-		pSenior.acrescBonus = 25;
+		
 
 		// CALCULA O SALARIO BRUTO
 		pSenior.salarioB = salarioServ.calSalarioBruto(pSenior.qtdHorasTrabalhadas, pSenior.valorHorasTrabalhadas);
@@ -43,21 +45,21 @@ public class Principal {
 		// CALCULA O SALARIO LIQUIDO
 		pSenior.salarioL = salarioServ.calSalarioLiquido(pSenior.salarioB, pSenior.IrSenior);
 
-		// CALCULA O SALARIO BONUS
-		pSenior.salarioL = salarioServ.SalarioBonus(pSenior.salarioB, pSenior.acrescBonus, pSenior.salarioL, pSenior.IrSenior);
+		// CALCULA O VALOR DO BONUS
+		pSenior.valorBonus = salarioServ.calValorBonus(pSenior.qtdHorasTrabalhadas, pSenior.valorHorasTrabalhadas);
 
 		// EXIBE NA TELA VALOR SALARIO PROFESSOR SENIOR
-		System.out.println("O professor senior tem o salario de:" + pSenior.salarioB);
-		System.out.println("O salario liquido do professor senior é:" + pSenior.salarioL);
+		System.out.println("\n****** Extrato do Professor Senior ********");
+		System.out.println("O professor terá um SALÁRIO BRUTO de:" + pSenior.salarioB);
 
-		if (pSenior.qtdHorasTrabalhadas > 500) {
-
-			System.out.println("O professor senior ganhou um bonus de:" + pSenior.salarioL);
-		}
+		System.out.println("O SALÁRIO LIQUIDO do professor é:" + pSenior.salarioL);
+		
+		System.out.println("O valor recebido pelo de PRÊMIO é de:" + pSenior.valorBonus);
 
 // ***************************************************#########################################***************************************************#########################################
 
-		// INSERÇÃO DE DADOS DOS PROFESSORES *PLENO
+  		// INSERÇÃO DE DADOS DOS PROFESSORES *PLENO
+
 		System.out.println("\n****** Cadastro de Professores Pleno ********");
 
 		System.out.println("Digite o nome do Professor Pleno:");
@@ -78,10 +80,17 @@ public class Principal {
 
 		// CALCULA O SALARIO LIQUIDO
 		pPleno.salarioL = salarioServ.calSalarioLiquido(pPleno.salarioB, pPleno.IrPleno);
+		
+		// CALCULA O VALOR DO BONUS
+		pPleno.valorBonus = salarioServ.calValorBonus(pPleno.qtdHorasTrabalhadas, pPleno.valorHorasTrabalhadas);
 
 		// EXIBE NA TELA VALOR SALARIO PROFESSOR PLENO
-		System.out.println("O professor pleno tem o salario de:" + pPleno.salarioB);
-		System.out.println("O salario liquido do professor pleno é:" + pPleno.salarioL);
+		System.out.println("\n****** Extrato do Professor Pleno ********");
+		System.out.println("O professor terá um SALÁRIO BRUTO de:" + pPleno.salarioB);
+
+		System.out.println("O SALÁRIO LIQUIDO do professor é:" + pPleno.salarioL);
+				
+		System.out.println("O valor recebido pelo de PRÊMIO é de:" + pPleno.valorBonus);
 
 // ***************************************************#########################################***************************************************#########################################
 
@@ -106,13 +115,20 @@ public class Principal {
 
 		// CALCULA O SALARIO LIQUIDO
 		pJunior.salarioL = salarioServ.calSalarioLiquido(pJunior.salarioB, pJunior.IrJunior);
+		
+		// CALCULA O VALOR DO BONUS
+		pJunior.valorBonus = salarioServ.calValorBonus(pJunior.qtdHorasTrabalhadas, pJunior.valorHorasTrabalhadas);
 
-		// EXIBE NA TELA VALOR SALARIO PROFESSOR SENIOR
-		System.out.println("O professor junior tem o salario de:" + pJunior.salarioB);
-		System.out.println("O salario liquido do professor junior é:" + pJunior.salarioL);
-
+		// EXIBE NA TELA VALOR SALARIO PROFESSOR PLENO
+		System.out.println("\n****** Extrato do Professor Pleno ********");
+		System.out.println("O professor terá um SALÁRIO BRUTO de:" + pJunior.salarioB);
+		
+	    System.out.println("O SALÁRIO LIQUIDO do professor é:" + pJunior.salarioL);
+		
+		System.out.println("O valor recebido pelo de PRÊMIO é de:" + pJunior.valorBonus);
+		
 		entradaDeDados.close();
-
+ 
 	}
 
 }

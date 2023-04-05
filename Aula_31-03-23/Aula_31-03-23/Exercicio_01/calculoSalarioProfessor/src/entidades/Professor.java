@@ -10,6 +10,6 @@ public class Professor {
 		public double valorHorasTrabalhadas;
 		public double acrescBonus; // 0.25%;
 		public double porceBonus;
-		public double bonus;
+		public double valorBonus;
 
 }
