@@ -15,6 +15,9 @@ public class Principal {
 		ProfSenior pSenior = new ProfSenior();
 		ProfPleno pPleno = new ProfPleno();
 		ProfJunior pJunior = new ProfJunior();
+		
+		String recebeNome;
+		String recebeCpf;
 
 		SalarioServico salarioServ = new SalarioServico();
 
@@ -25,9 +28,11 @@ public class Principal {
 
 		System.out.println("Digite o nome do Professor Senior:");
 		pSenior.nome = entradaDeDados.next();
+		pSenior.setNome(recebeNome);
 
 		System.out.println("Digite o CPF do Professor Senior:");
 		pSenior.cpf = entradaDeDados.next();
+		pSenior.setCpf(recebeCpf);
 
 		System.out.println("Digite o quantidade de horas trabalhadas pelo Professor Senior:");
 		pSenior.qtdHorasTrabalhadas = Integer.parseInt(entradaDeDados.next());
