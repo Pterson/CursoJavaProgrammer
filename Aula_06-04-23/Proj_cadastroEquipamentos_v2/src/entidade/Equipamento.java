@@ -1,23 +1,26 @@
-package entidades;
+package entidade;
 
-public class Equipamentos {
+public class Equipamento {
 	
-	private String codigo;
 	private String marca;
+	private String codigo;
 	private double valorDaCompra;
 	private double valorDaVenda;
 	private double lucro;
-	public String getCodigo() {
-		return codigo;
-	}
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
-	}
+	
+//____________GETTERS e SETTERS____________	
+	
 	public String getMarca() {
 		return marca;
 	}
 	public void setMarca(String marca) {
 		this.marca = marca;
+	}
+	public String getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
 	}
 	public double getValorDaCompra() {
 		return valorDaCompra;
@@ -37,9 +40,5 @@ public class Equipamentos {
 	public void setLucro(double lucro) {
 		this.lucro = lucro;
 	}
-
-//____________GETTERS e SETTERS____________	
 	
-	
-
 }

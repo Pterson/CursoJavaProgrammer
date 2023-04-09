@@ -1,6 +1,6 @@
 package entidades;
 
-public class Furadeiras {
+public class Furadeiras extends Equipamentos {
 	
 	private String TiposDeBroncas; 
 	

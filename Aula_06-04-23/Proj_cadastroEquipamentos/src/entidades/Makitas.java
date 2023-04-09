@@ -1,6 +1,6 @@
 package entidades;
 
-public class Makitas {
+public class Makitas extends Equipamentos {
 	
 	private String tiposDeDiscos;
 	
