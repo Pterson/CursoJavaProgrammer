@@ -3,10 +3,10 @@ package servicos;
 public class CalculaLucro {
 	
 //======RETORNA LIQUIDO BRUTO_______________________________________________
-	public double CalculaLucro(double valorDaCompra, double valorDaVenda) {
+	public double LucroLiquido(double valorDaVendaTemp, double valorDaCompraTemp) {
 		
-		double LucroLiquido = valorDaCompra - valorDaVenda;
+		double LucroLiquidoTemp = valorDaVendaTemp - valorDaCompraTemp;
 		
-		return LucroLiquido;
+		return LucroLiquidoTemp;
 	}
 }
