@@ -1,5 +1,6 @@
 package principal;
 
+
 import entidade.Furadeira;
 import entidade.Makita;
 import telas.TelasEquipamentos;
@@ -7,7 +8,11 @@ import telas.TelasEquipamentos;
 public class Principal {
 
 	public static void main(String[] args) {
-		
+
+//======INICIA OBJETO MENU (INSTANCIA DO OBJETOS A PARTIR DAS CLASSES)____________________________________		
+		TelasEquipamentos telasMenu = new TelasEquipamentos();
+		telasMenu.menu(); // invoca o metodo menu 
+				
 //======INICIANDO OBJETOS (INSTANCIANDO OBJETOS A PARTIR DAS CLASSES)____________________________________
 		Furadeira furadeira = new Furadeira();
 		Makita makita = new Makita();		
@@ -22,8 +27,6 @@ public class Principal {
 		furadeira = telasExibe.exibeFuradeira(furadeira);
 		makita = telasExibe.exibeMakita(makita);
 		
-		
-			
 		
 
 	}
