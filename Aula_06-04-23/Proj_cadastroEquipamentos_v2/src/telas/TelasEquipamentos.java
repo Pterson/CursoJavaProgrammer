@@ -16,31 +16,65 @@ public class TelasEquipamentos {
 	Makita cadMakita = new Makita();
 	
 /*====================================================_____MENU FERRAMENTAS_____===============================================================*/	
-	public void menu() {
-
-		
-        int opcao = 0;
-        while (opcao != 3) {
-	        opcao = Integer.parseInt(JOptionPane.showInputDialog("1. Furadeira  -  2. Makita  -  3. Sair"));
 	
+	public void menu() {
+		int opcao;
+		boolean sair = true;
+		
+		do {
+			
+			opcao = Integer.parseInt(JOptionPane.showInputDialog("1. Furadeira  -  2. Makita  -  3. Sair"));
+			
 	        if (opcao == 1) {
 	            exibeFuradeira(cadastrarFuradeira(cadFuradeira));
 	        }
-	        else if (opcao == 2) {
+	        
+	        if (opcao == 2) {
 	            exibeMakita(cadastrarMakita(cadMakita));
 	        }
 	        
-	        else if (opcao == 3) {
+	        if (opcao == 3) {
+	        	sair = false;
 	            JOptionPane.showMessageDialog(null, "Saindo...");
 	            System.exit(0); // Encerra a execução do programa
 	        }
-	        
-	        else {
+			else {
 	            JOptionPane.showMessageDialog(null, "Opção Inválida!!!");
 	        }
-    }
+			
+		} while (sair == true);
+		
+	}	
+
+	
+//======BLOCO WHILE - SEGUNDA OPÇÃO DE LAÇO		
+	/*	public void menu() {
+
+	
+    int opcao = 0;
+    while (opcao != 3) {
+        opcao = Integer.parseInt(JOptionPane.showInputDialog("1. Furadeira  -  2. Makita  -  3. Sair"));
+
+        if (opcao == 1) {
+            exibeFuradeira(cadastrarFuradeira(cadFuradeira));
+        }
+        else if (opcao == 2) {
+            exibeMakita(cadastrarMakita(cadMakita));
+        }
         
+        else if (opcao == 3) {
+            JOptionPane.showMessageDialog(null, "Saindo...");
+            System.exit(0); // Encerra a execução do programa
+        }
+        
+        else {
+            JOptionPane.showMessageDialog(null, "Opção Inválida!!!");
+        }
 }
+    
+}*/
+	
+//======BLOCO SWITCH - TERCEIRA OPÇÃO DE LAÇO	
 	/*
 	MENU COM SWITCH CASE
 	
@@ -67,6 +101,8 @@ public class TelasEquipamentos {
 	    }
 	}
 	*/
+
+	
 	
 /*====================================================_____FURADEIRAS_____===============================================================*/
 	
