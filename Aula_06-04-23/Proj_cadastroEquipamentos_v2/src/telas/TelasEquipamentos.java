@@ -21,23 +21,23 @@ public class TelasEquipamentos {
 		
         int opcao = 0;
         while (opcao != 3) {
-        opcao = Integer.parseInt(JOptionPane.showInputDialog("1. Furadeira  -  2. Makita  -  3. Sair"));
-
-        if (opcao == 1) {
-            exibeFuradeira(cadastrarFuradeira(cadFuradeira));
-        }
-        else if (opcao == 2) {
-            exibeMakita(cadastrarMakita(cadMakita));
-        }
-        
-        else if (opcao == 3) {
-            JOptionPane.showMessageDialog(null, "Saindo...");
-            System.exit(0); // Encerra a execução do programa
-        }
-        
-        else {
-            JOptionPane.showMessageDialog(null, "Opção Inválida!!!");
-        }
+	        opcao = Integer.parseInt(JOptionPane.showInputDialog("1. Furadeira  -  2. Makita  -  3. Sair"));
+	
+	        if (opcao == 1) {
+	            exibeFuradeira(cadastrarFuradeira(cadFuradeira));
+	        }
+	        else if (opcao == 2) {
+	            exibeMakita(cadastrarMakita(cadMakita));
+	        }
+	        
+	        else if (opcao == 3) {
+	            JOptionPane.showMessageDialog(null, "Saindo...");
+	            System.exit(0); // Encerra a execução do programa
+	        }
+	        
+	        else {
+	            JOptionPane.showMessageDialog(null, "Opção Inválida!!!");
+	        }
     }
         
 }
