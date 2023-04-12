@@ -29,11 +29,11 @@ public class TelasEquipamentos {
 	            exibeFuradeira(cadastrarFuradeira(cadFuradeira));
 	        }
 	        
-	        if (opcao == 2) {
+	        else if (opcao == 2) {
 	            exibeMakita(cadastrarMakita(cadMakita));
 	        }
 	        
-	        if (opcao == 3) {
+	        else if (opcao == 3) {
 	        	sair = false;
 	            JOptionPane.showMessageDialog(null, "Saindo...");
 	            System.exit(0); // Encerra a execução do programa
@@ -42,7 +42,7 @@ public class TelasEquipamentos {
 	            JOptionPane.showMessageDialog(null, "Opção Inválida!!!");
 	        }
 			
-		} while (sair == true);
+		} while (sair);
 		
 	}	
 
