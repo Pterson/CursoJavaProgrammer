@@ -12,18 +12,21 @@ public class Professor {
 	public double porceBonus;
 	public double valorBonus;
 	
+//=======GETTERS e SETTER_________________________	
 	
-	private String nome;
-	
-	// Retorna o valor da variavel NOME
 	public String getNome() {
-		return this.nome;
+		return nome;
 	}
-	
-	
-	// Retorna o valor da variavel CPF
+	public void setNome(Professor recebeNome) {
+		this.nome = recebeNome;
+	}
 	public String getCpf() {
-		return this.cpf;
+		return cpf;
 	}
-
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	
 }
+	
+	

@@ -2,9 +2,11 @@ package principal;
 
 import java.util.Scanner;
 
+
 import entidades.ProfJunior;
 import entidades.ProfPleno;
 import entidades.ProfSenior;
+import entidades.Professor;
 import servicos.SalarioServico;
 
 public class Principal {
@@ -16,24 +18,49 @@ public class Principal {
 		ProfPleno pPleno = new ProfPleno();
 		ProfJunior pJunior = new ProfJunior();
 		
-		String recebeNome;
-		String recebeCpf;
+		Professor recebeNome = new Professor();
+		Professor recebeCpf = new Professor();
+		
+		
+//		String recebeNome;
+//		String recebeCpf;
 
 		SalarioServico salarioServ = new SalarioServico();
 
 		Scanner entradaDeDados = new Scanner(System.in);
 
 		// INSERÇÃO DE DADOS DOS PROFESSORES *SENIOR
+		
+		
 		System.out.println("\n****** Cadastro de Professores Senior ********");
-
-		System.out.println("Digite o nome do Professor Senior:");
-		pSenior.nome = entradaDeDados.next();
-		pSenior.setNome(recebeNome);
-
+		
+	
+					
+	/*	System.out.println("Digite o nome do Professor Senior:");
+		
+		nCpf.nome = entradaDeDados.next(nomeCpf);
+		nCpf.setNome();
+		
 		System.out.println("Digite o CPF do Professor Senior:");
-		pSenior.cpf = entradaDeDados.next();
-		pSenior.setCpf(recebeCpf);
+		
+		nCpf.cpf = entradaDeDados.next(nomeCpf);
+		nCpf.setCpf();*/
+		
+		public Professor nomProfessor (Professor nCpf) {
+			Professor professor = new Professor();	
+	
+			
+			nCpf.setNome(JOptionPane.showInputDialog("Digite o NOME"));
+			nCpf.setCpf(JOptionPane.showInputDialog("Digite o CPF"));
+			
+			
+			return nCpf;
+			
+		}
+		
 
+
+		
 		System.out.println("Digite o quantidade de horas trabalhadas pelo Professor Senior:");
 		pSenior.qtdHorasTrabalhadas = Integer.parseInt(entradaDeDados.next());
 		
@@ -60,7 +87,7 @@ public class Principal {
 		System.out.println("O SALÁRIO LIQUIDO do professor é:" + pSenior.salarioL);
 		
 		System.out.println("O valor recebido pelo de PRÊMIO é de:" + pSenior.valorBonus);
-
+		
 // ***************************************************#########################################***************************************************#########################################
 
   		// INSERÇÃO DE DADOS DOS PROFESSORES *PLENO
