@@ -25,7 +25,7 @@ public class InterfaceUsuario {
 			ArquivoDeDados arquivodedados = new ArquivoDeDados();
 		
 		do {	
-			escolha = Integer.parseInt(JOptionPane.showInputDialog("1. Estudante  -  2. Docente  -  3. Coodenador  -  4. Encerrar"));
+			escolha = Integer.parseInt(JOptionPane.showInputDialog("ESCOLHA UMA OPÇÃO:\n" + "1. Estudante\n"+ "2. Docente\n"+  "3. Coodenador\n"+  "4. Encerrar"));
 				
 			if (escolha == 1) {					
 			//	arquivodedados.cadastrarEstudante(cadastrarEstudante(estudante)); 
@@ -83,14 +83,23 @@ public class InterfaceUsuario {
 
 //4======BLOCO EXIBE INFORMAÇÕES CADASTRADAS ESTUDANTE (GET)======================================================================================	
 
-		public Estudante exibeEstudante(Estudante exibeEstudante) {
+		public void exibeEstudante(Estudante exibeEstudante) {
 			
+			StringBuilder janelaUser = new StringBuilder(); // CRIANDO UMA NOVA INSTÂNCIA DA CLASSE "StringBuilder" - é uma classe que permite criar e manipular strings, janelaUser (nova instância) que será exibida na caixa de diálogo.
+			
+			janelaUser.append("CONFIRME AS INFORMAÇÕES DO ESTUDANTE:\n");			
+			janelaUser.append("Nome: ").append(exibeEstudante.getNome()).append("\n");
+			janelaUser.append("Matrícula: ").append(exibeEstudante.getMatricula()).append("\n");
+			janelaUser.append("Turma: ").append(exibeEstudante.getTurma()).append("\n");
+			
+			JOptionPane.showMessageDialog(null, janelaUser.toString());
+			
+			/*
 			JOptionPane.showMessageDialog(null,"CONFIRME AS INFORMAÇÕES");
 			JOptionPane.showMessageDialog(null,"O nome do estudante cadastrado foi: " + exibeEstudante.getNome());
 			JOptionPane.showMessageDialog(null,"O número de matricula do estudante é: " + exibeEstudante.getMatricula());
 			JOptionPane.showMessageDialog(null,"O estudante está na turma: " + exibeEstudante.getTurma());
-			
-			return exibeEstudante;
+			*/			
 		}
 //4___________________________________________________________FINALIZANDO BLOCO_____________________________________________________________________	
 
@@ -116,12 +125,20 @@ public class InterfaceUsuario {
 
 		public void exibeDocente (Docente exibeDocente) {
 			
-			JOptionPane.showMessageDialog(null,"CONFIRME AS INFORMAÇÕES");
+			StringBuilder janelaUser = new StringBuilder(); 
+			
+			janelaUser.append("CONFIRME AS INFORMAÇÕES DO DOCENTE:\n");
+			janelaUser.append("Nome: ").append(exibeDocente.getNome()).append("\n");
+			janelaUser.append("Disciplina: ").append(exibeDocente.getDisciplina()).append("\n");
+			janelaUser.append("Matrícula: ").append(exibeDocente.getMatricula()).append("\n");
+
+		    JOptionPane.showMessageDialog(null, janelaUser.toString());
+			
+		/*	JOptionPane.showMessageDialog(null,"CONFIRME AS INFORMAÇÕES");
 			JOptionPane.showMessageDialog(null,"O nome do docente cadastrado foi: " + exibeDocente.getNome());			
 			JOptionPane.showMessageDialog(null,"O disciplina do docente é: " + exibeDocente.getDisciplina());
 			JOptionPane.showMessageDialog(null,"A matricula do docente é: " + exibeDocente.getMatricula());		
-			
-		//	return exibeDocente;
+		*/
 		}
 //6___________________________________________________________FINALIZANDO BLOCO_____________________________________________________________________
 
@@ -146,14 +163,23 @@ public class InterfaceUsuario {
 		
 //8======BLOCO EXIBE INFORMAÇÕES CADASTRADAS COORDENADOR (GET)======================================================================================
 		
-		public Coordenador exibeCoordenador (Coordenador exibeCoordenador) {
+		public void exibeCoordenador (Coordenador exibeCoordenador) {
 			
+			StringBuilder janelaUser = new StringBuilder(); 
+			
+			janelaUser.append("CONFIRME AS INFORMAÇÕES DO COORDENADOR:\n");
+			janelaUser.append("Nome: ").append(exibeCoordenador.getNome()).append("\n");
+			janelaUser.append("O coordenador faz gestão de: ").append(exibeCoordenador.getGerencia()).append("\n");
+			janelaUser.append("Matrícula: ").append(exibeCoordenador.getMatricula()).append("\n");
+			
+			JOptionPane.showMessageDialog(null, janelaUser.toString());
+			
+			/*
 			JOptionPane.showMessageDialog(null,"CONFIRME AS INFORMAÇÕES");
 			JOptionPane.showMessageDialog(null,"O nome do coordenador cadastrado foi: " + exibeCoordenador.getNome());
 			JOptionPane.showMessageDialog(null,"O coordenador faz gestão de: " + exibeCoordenador.getGerencia());
 			JOptionPane.showMessageDialog(null,"A matricula do coordenador é: " + exibeCoordenador.getMatricula());
-			
-			return exibeCoordenador;
+			*/	
 		}
 //8___________________________________________________________FINALIZANDO BLOCO_____________________________________________________________________
 
