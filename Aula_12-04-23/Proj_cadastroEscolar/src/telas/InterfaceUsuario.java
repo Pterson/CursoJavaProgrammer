@@ -19,7 +19,7 @@ public class InterfaceUsuario {
 
 //2======================================================_____MENU USUÁRIOS_____====================================================================	
 		public void menu() {
-			int escolha = 0;
+			int escolha;
 			boolean encerrar = true;
 			
 			ArquivoDeDados arquivodedados = new ArquivoDeDados();
