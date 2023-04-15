@@ -1,0 +1,3 @@
+NOME: Larissa Ananias
+CPF: 96325874145
+TIPO: normal
