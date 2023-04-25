@@ -1,10 +1,20 @@
 package principal;
 
+import servicoArquivo.ManipulaArquivo;
+
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("teste");
+		
+		
+		
+		String path = "D:\\Repositorio_GitHub\\Meu_Repositorio\\CursoJavaProgrammer\\Aula_12-04-23\\arquivoException\\TesteDoArquivo.txt";
+		
+		
+			ManipulaArquivo manipulaArquivo = new ManipulaArquivo();
+			manipulaArquivo.escreverNoArquivo(path);
+		
+
 	}
 
 }

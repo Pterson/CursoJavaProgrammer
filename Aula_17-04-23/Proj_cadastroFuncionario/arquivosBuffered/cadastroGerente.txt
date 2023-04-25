@@ -1,0 +1,5 @@
+
+------ INFORMAÇÕES DO GERENTE ------
+Nome: Peterson
+CPF:123
+Gerência: TI
