@@ -45,7 +45,7 @@ public class TelaMenuCoordenador {
 		panelMenuCoordenador.add(botaoEnviar);
 		
 		
-//______ADICIONA O PANELMENUCOORDENADOR NO FRAMEMENUCOORDENADOR		
+//______ADICIONA O PANELMENUCOORDENADOR NO FRAMEMENUCOORDENADOR
 		frameMenuCoordenador.add(panelMenuCoordenador);
 		frameMenuCoordenador.setVisible(true);
 		
