@@ -1,6 +1,6 @@
 package telas;
 
-import java.awt.Component;
+
 import java.awt.GridLayout;
 
 import javax.swing.JButton;

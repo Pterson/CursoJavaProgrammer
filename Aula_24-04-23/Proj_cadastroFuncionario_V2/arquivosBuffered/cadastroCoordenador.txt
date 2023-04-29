@@ -1,5 +1,3 @@
-
------- INFORMAÇÕES DO COORDENADOR ------
-Nome: Peter
-CPF: 321
-Coordenação: TI
+O nome do coordenador é: Peterson
+O cpf do coordenador é:123
+A gerencia do coordenador é: Tec Inf

@@ -54,7 +54,7 @@ public class ControladorMenuPrincipal implements ActionListener{
 			}
 		} else
 			
-			JOptionPane.showMessageDialog(null, "Não Existe está Rota!!!");
+			JOptionPane.showMessageDialog(null, "Está Rota Não Existe!!!");
 
 	}
 
