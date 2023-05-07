@@ -9,8 +9,8 @@ import entidades.JogadorFutebol;
 public class Principal {
 
 	public static void main(String[] args) {
-
-		List<JogadorFutebol> listaJogadores = new ArrayList<>();
+		
+	List<JogadorFutebol> listaJogadores = new ArrayList<>();
 
 		Scanner entradaDados = new Scanner(System.in);
 
