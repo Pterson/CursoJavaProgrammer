@@ -16,10 +16,10 @@ public class TelaCadastroConvidado {
 	
 	public void cadastrarConvidado(JFrame menuPrincipal, RepositorioConvidado repositorioConvidado) {
 		
-		String nome = "Digite o nome:";		
-		String endereco = "Digite o endereço:";
-		String profissao = "Digite a profissão:";
-		String convite = "Digite o convite:";
+		String nome = "Digite nome";
+		String convite = "Digite convite";
+		String endereco = "Digite endereço";
+		String profissao = "Digite profissão";
 		
 		JFrame frameTelaCadastroConvidado = new JFrame();	
 		frameTelaCadastroConvidado.setSize(400, 250);

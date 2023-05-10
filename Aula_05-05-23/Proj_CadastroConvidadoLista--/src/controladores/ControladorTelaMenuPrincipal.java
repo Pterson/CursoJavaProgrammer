@@ -10,7 +10,6 @@ import repositorio.RepositorioConvidado;
 import telas.TelaCadastroConvidado;
 import telas.TelaDeletarConvidados;
 import telas.TelaListarConvidados;
-import telas.TelaLocalizaAlterarConvidado;
 
 
 public class ControladorTelaMenuPrincipal implements ActionListener {
@@ -30,8 +29,6 @@ public class ControladorTelaMenuPrincipal implements ActionListener {
 	TelaListarConvidados telaListarConvidados = new TelaListarConvidados();
 
 	TelaDeletarConvidados telaDeletarConvidados = new TelaDeletarConvidados();
-	
-	TelaLocalizaAlterarConvidado telaLocalizaAlterarConvidado = new TelaLocalizaAlterarConvidado();
 	
 	RepositorioConvidado repositorioConvidado = new RepositorioConvidado();
 
@@ -61,14 +58,7 @@ public class ControladorTelaMenuPrincipal implements ActionListener {
 			telaDeletarConvidados.deletarConvidados(repositorioConvidado.retornarListaConvidados(), frameTelaMenuPrincipal, repositorioConvidado);
 			frameTelaMenuPrincipal.setVisible(false);
 			break;
-			
-		
-		case "4":
-			
-			telaLocalizaAlterarConvidado.criarTelaLocalizaAlterarConvidado(repositorioConvidado.retornarListaConvidados(), frameTelaMenuPrincipal, repositorioConvidado);
-			frameTelaMenuPrincipal.setVisible(false);
-			break;
-			
+	
 	    }
 		
 	}

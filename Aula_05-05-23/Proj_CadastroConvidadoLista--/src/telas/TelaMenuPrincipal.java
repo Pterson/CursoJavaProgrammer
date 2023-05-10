@@ -18,7 +18,6 @@ public class TelaMenuPrincipal {
 		String opcao1 = "1. Para Cadastrar";
 		String opcao2 = "2. Para Listar";
 		String opcao3 = "3. Para Deletar";
-		String opcao4 = "4. Para Atualizar";
 		
 		
 		JFrame frameTelaMenuPrincipal = new JFrame();		
@@ -42,9 +41,6 @@ public class TelaMenuPrincipal {
 		
 		JLabel labelOpcao3 = new JLabel(opcao3);
 		panelTelaMenuPrincipal.add(labelOpcao3);
-		
-		JLabel labelOpcao4 = new JLabel(opcao4);
-		panelTelaMenuPrincipal.add(labelOpcao4);
 		
 
 		JTextField textRespostaTelaMenuPrincipal = new JTextField(10);

@@ -49,11 +49,11 @@ public class TelaListarConvidados {
 		
 		tabelaConvidados.setBounds(30, 40, 300, 300); //DIMENSÕES: posicaoLinha, qtdLinhas, posicaoColuna, posicaoLinha
 		
-		JPanel panelListarConvidados = new JPanel();		
+		JScrollPane scrollPaneListarConvidados = new JScrollPane(tabelaConvidados);
 		
-		JScrollPane scrollPaneListarConvidados = new JScrollPane(tabelaConvidados);				
+		JPanel panelListarConvidados = new JPanel();
+		
 		panelListarConvidados.add(scrollPaneListarConvidados);
-		
 		
 		JButton voltarTelaListarConvidados = new JButton("Voltar ao Menu");
 		panelListarConvidados.add(voltarTelaListarConvidados);
