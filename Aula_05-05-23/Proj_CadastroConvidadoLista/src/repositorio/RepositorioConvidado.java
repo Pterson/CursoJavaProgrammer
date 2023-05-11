@@ -4,15 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entidades.Convidado;
+import persistencia.ConvidadoDao;
 
 public class RepositorioConvidado implements InterfaceRepositorio{
 	
 	List<Convidado> listaConvidados = new ArrayList<>();
+	
+	ConvidadoDao convidadoDao = new ConvidadoDao();
 
 	@Override
 	public void salvarConvidado(Convidado convidado) {
 		
-		listaConvidados.add(convidado);
+		//listaConvidados.add(convidado);
+		convidadoDao.salvarConvidadoBanco(convidado);
 	}
 	
 
