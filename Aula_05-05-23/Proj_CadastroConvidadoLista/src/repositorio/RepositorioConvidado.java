@@ -23,7 +23,8 @@ public class RepositorioConvidado implements InterfaceRepositorio{
 	@Override
 	public List<Convidado> retornarListaConvidados() {
 		
-		return listaConvidados;
+		//return listaConvidados;
+		return convidadoDao.buscarListaDeConvidados();
 	}
 	
 
@@ -32,6 +33,9 @@ public class RepositorioConvidado implements InterfaceRepositorio{
 		
 		boolean result;
 		
+		result = convidadoDao.deletarConvidadoConvite(convidado.getConvite());
+		
+		/*
 		try {			
 			listaConvidados.remove(convidado);
 			result = true;
@@ -40,7 +44,7 @@ public class RepositorioConvidado implements InterfaceRepositorio{
 		} catch (Exception e) {
 			result = false;
 		}
-		
+		*/
 		
 		return result;
 	}
@@ -48,7 +52,7 @@ public class RepositorioConvidado implements InterfaceRepositorio{
 	
 
 	@Override
-	public Convidado buscarConvidado(String convite) {
+	public Convidado buscarConvidado(String convite) { //Busca o convidado de acordo com o CONVITE, se não encontrar o metodo retorna null
 		
 		
 		for (Convidado convidadoVerificado:retornarListaConvidados()) {
@@ -63,7 +67,8 @@ public class RepositorioConvidado implements InterfaceRepositorio{
 		return null;
 	}
 
-
+	
+	@Override
 	public void alterarConvidado(Convidado convidadoAtual, Convidado convidadoNovo) {
 
 		listaConvidados.remove(convidadoAtual);

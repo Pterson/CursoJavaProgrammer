@@ -13,5 +13,7 @@ public interface InterfaceRepositorio {
 	public boolean deletarConvidado(Convidado convidado);
 	
 	public Convidado buscarConvidado(String convite);
+	
+	public void alterarConvidado(Convidado convidadoAtual, Convidado convidadoNovo);
 		
 }
