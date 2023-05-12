@@ -26,8 +26,7 @@ public class ControladorTelaFormularioAlterarConvidado implements ActionListener
 
 	public ControladorTelaFormularioAlterarConvidado(JFrame frameMenuInicial, JFrame frameFormularioAlterar,
 			JTextField textNomeRecebido, JTextField textEnderecoRecebido, JTextField textProfissaoRecebido,
-			JTextField textConviteRecebido, RepositorioConvidado repositorioConvidadoRecebido,
-			Convidado convidadoAtual) {
+			JTextField textConviteRecebido, RepositorioConvidado repositorioConvidadoRecebido, Convidado convidadoAtual) {
 		super();
 		this.frameMenuInicial = frameMenuInicial;
 		this.frameFormularioAlterar = frameFormularioAlterar;

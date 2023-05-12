@@ -31,18 +31,20 @@ public class TelaFormularioAlterarConvidado {
 		GridLayout grid = new GridLayout (0,1);
 		panelFormularioAlterar.setLayout(grid);
 		
+		
 		JLabel labelNome = new JLabel(nome);
 		panelFormularioAlterar.add(labelNome);
 		
 		JTextField textNome = new  JTextField(10);
 		textNome.setText(convidadoEncontrado.getNome()); // Adicionará o nome do convidado encontrado no Campo de texto do nome
 		panelFormularioAlterar.add(textNome);
-					
+			
+		
 		JLabel labelEndereco = new JLabel(endereco);
 		panelFormularioAlterar.add(labelEndereco);
 		
 		JTextField textEndereco = new  JTextField(10);
-		textEndereco.setText(convidadoEncontrado.getConvite());
+		textEndereco.setText(convidadoEncontrado.getEndereco());
 		panelFormularioAlterar.add(textEndereco);
 		
 		
@@ -50,8 +52,9 @@ public class TelaFormularioAlterarConvidado {
 		panelFormularioAlterar.add(labelProfissao);
 		
 		JTextField textProfissao = new  JTextField(10);
-		textProfissao.setText(convidadoEncontrado.getConvite());
+		textProfissao.setText(convidadoEncontrado.getProfissao());
 		panelFormularioAlterar.add(textProfissao);
+		
 		
 		JLabel labelConvite = new JLabel(convite);
 		panelFormularioAlterar.add(labelConvite);

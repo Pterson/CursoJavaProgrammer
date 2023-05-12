@@ -59,10 +59,7 @@ public class ControladorTelaLocalizaAlterarConvidado implements ActionListener{
 		if (botao.equals("Voltar")) {
 			menuPrincipalRecebido.setVisible(true);
 			frameAlterarRecebido.setVisible(false);
-	}
+	}	
 	
-	
-	
-	
-	}
+ 	}
 }

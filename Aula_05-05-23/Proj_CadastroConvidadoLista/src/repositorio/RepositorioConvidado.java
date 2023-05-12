@@ -11,6 +11,8 @@ public class RepositorioConvidado implements InterfaceRepositorio{
 	List<Convidado> listaConvidados = new ArrayList<>();
 	
 	ConvidadoDao convidadoDao = new ConvidadoDao();
+	
+	
 
 	@Override
 	public void salvarConvidado(Convidado convidado) {
@@ -48,8 +50,7 @@ public class RepositorioConvidado implements InterfaceRepositorio{
 		
 		return result;
 	}
-	
-	
+		
 
 	@Override
 	public Convidado buscarConvidado(String convite) { //Busca o convidado de acordo com o CONVITE, se não encontrar o metodo retorna null
