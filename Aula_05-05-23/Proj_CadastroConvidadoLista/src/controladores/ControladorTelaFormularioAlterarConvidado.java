@@ -41,7 +41,7 @@ public class ControladorTelaFormularioAlterarConvidado implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
-		repositorioConvidadoRecebido.alterarConvidado(convidadoAtual, popularConvidadoNovo());
+		repositorioConvidadoRecebido.alterarConvidado(popularConvidadoNovo());
 		
 		frameMenuInicial.setVisible(true);
 		

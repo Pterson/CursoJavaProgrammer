@@ -14,6 +14,6 @@ public interface InterfaceRepositorio {
 	
 	public Convidado buscarConvidado(String convite);
 	
-	public void alterarConvidado(Convidado convidadoAtual, Convidado convidadoNovo);
+	public void alterarConvidado(Convidado convidadoNovo);
 		
 }

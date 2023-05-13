@@ -61,6 +61,7 @@ public class TelaFormularioAlterarConvidado {
 		
 		JTextField textConvite = new  JTextField(10);		
 		textConvite.setText(convidadoEncontrado.getConvite()); // Adicionará o convite do convidado encontrado no Campo de texto do nome		
+		textConvite.setEditable(false); // Com esse parametro false não é possivel alterar o campo
 		panelFormularioAlterar.add(textConvite);
 		
 		

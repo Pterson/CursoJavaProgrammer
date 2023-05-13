@@ -8,13 +8,16 @@ import java.util.List;
 
 
 import entidades.Convidado;
+import manipulacaoArquivo.LogCrudConvidado;
 
 // Que que acessa a tabela Objeto Convidado
 public class ConvidadoDao {
 	
+	LogCrudConvidado logCrudConvidado = new LogCrudConvidado();
+	
 	public boolean salvarConvidadoBanco(Convidado convidado) {
 		
-		FabricaConexao fabricaConexao = new FabricaConexao();
+		FabricaConexao fabricaConexao = new FabricaConexao();	
 		
 		boolean salvamento = false; // Resposta do metodo
 		
@@ -40,6 +43,7 @@ public class ConvidadoDao {
 			
 			salvamento = true;
 			System.out.println("Convidado Registrado");
+			logCrudConvidado.gravarArquivoLogConvidado(convidado, "Cadastrar");
 			
 		} catch (Exception e) {
 			
@@ -183,5 +187,64 @@ public class ConvidadoDao {
 		return listaConvidadosDoBanco;
 	
 
+	}
+
+
+	public boolean alterarConvidado(Convidado convidadoNovo) {
+
+		FabricaConexao fabricaConexao = new FabricaConexao();
+		boolean alteracao = false; // Resposta do metodo
+		
+		String comandoSqlUpdate = "UPDATE tabela_convidado SET nome = ?, endereco = ?, profissao = ?, convite = ? WHERE convite = ?";
+			
+				Connection conexaoRecebida = null; // recebe a conexao
+				PreparedStatement declaracaoComando = null; // preparação do comando
+		
+		try {
+					
+			conexaoRecebida = fabricaConexao.criarConexao();
+					
+			declaracaoComando = (PreparedStatement)conexaoRecebida.prepareStatement(comandoSqlUpdate); //Preparação do comando recebendo o banco com o comando sql
+				
+			declaracaoComando.setString(1, convidadoNovo.getNome());
+			declaracaoComando.setString(2, convidadoNovo.getEndereco());
+			declaracaoComando.setString(3, convidadoNovo.getProfissao());
+			declaracaoComando.setString(4, convidadoNovo.getConvite());
+			
+			declaracaoComando.setString(5, convidadoNovo.getConvite());
+				
+			declaracaoComando.execute();
+			
+			alteracao = true;
+			System.out.println("Convidado Alterado com sucesso!!!");			
+			logCrudConvidado.gravarArquivoLogConvidado(convidadoNovo, "Alterar");
+		
+	    } catch (Exception e) {
+			
+	    	System.out.println(e);
+	    	System.out.println("ERRO para Altera Convidado!!!");
+	    	alteracao = false;
+		
+	    } finally { // Executar depois de verificar o try
+	    	
+	    	try { //Fecha conexao
+	    		
+	    		if (conexaoRecebida != null) {
+	    			conexaoRecebida.close();
+	    		}
+	    		
+	    		if (declaracaoComando != null) {
+	    			declaracaoComando.close();
+	    		}
+	    	} catch (Exception e) {
+
+	    		System.out.println(e);
+				System.out.println("ERRO ao fechar a conexao!!!");
+			}
+			
+		}
+		
+		return alteracao;	
+	
 	}
 }
