@@ -16,12 +16,10 @@ public class TelaCadastroConvidado {
 	
 	public void cadastrarConvidado(JFrame menuPrincipal, RepositorioConvidado repositorioConvidado) {
 		
-		String cpf = "Digite o CPF:";
-		String nome = "Digite o NOME:";		
-		String endereco = "Digite o ENDEREÇO:";
-		String profissao = "Digite a PROFISSÃO:";
-		String email = "Digite o EMAIL:";
-		String convite = "Digite o CONVITE:";
+		String nome = "Digite o nome:";		
+		String endereco = "Digite o endereço:";
+		String profissao = "Digite a profissão:";
+		String convite = "Digite o convite:";
 		
 		JFrame frameTelaCadastroConvidado = new JFrame();	
 		frameTelaCadastroConvidado.setSize(400, 250);
@@ -35,11 +33,6 @@ public class TelaCadastroConvidado {
 		GridLayout grid = new GridLayout (0,1);
 		panelTelaCadastroConvidado.setLayout(grid);
 		
-		JLabel labelCpf = new JLabel(cpf);
-		panelTelaCadastroConvidado.add(labelCpf);
-		
-		JTextField textCpf = new  JTextField(10);
-		panelTelaCadastroConvidado.add(textCpf);		
 		
 		JLabel labelNome = new JLabel(nome);
 		panelTelaCadastroConvidado.add(labelNome);
@@ -59,12 +52,6 @@ public class TelaCadastroConvidado {
 		JTextField textProfissao = new  JTextField(10);
 		panelTelaCadastroConvidado.add(textProfissao);
 		
-		JLabel labelEmail = new JLabel(email);
-		panelTelaCadastroConvidado.add(labelEmail);
-		
-		JTextField textEmail = new  JTextField(10);
-		panelTelaCadastroConvidado.add(textEmail);
-		
 		JLabel labelConvite = new JLabel(convite);
 		panelTelaCadastroConvidado.add(labelConvite);
 		
@@ -82,7 +69,7 @@ public class TelaCadastroConvidado {
 		frameTelaCadastroConvidado.add(panelTelaCadastroConvidado);
 		frameTelaCadastroConvidado.setVisible(true);
 		
-		ControladorTelaCadastroConvidado controladorTelaCadastroConvidado = new ControladorTelaCadastroConvidado(textCpf, textNome, textEndereco, textProfissao, textEmail, textConvite, menuPrincipal, frameTelaCadastroConvidado, repositorioConvidado);
+		ControladorTelaCadastroConvidado controladorTelaCadastroConvidado = new ControladorTelaCadastroConvidado(textNome, textEndereco, textProfissao, textConvite, menuPrincipal, frameTelaCadastroConvidado, repositorioConvidado);
 		buttonTelaCadastroConvidado.addActionListener(controladorTelaCadastroConvidado);
 		
 		ControladorTelaListarConvidados controladorTelaListarConvidados = new ControladorTelaListarConvidados(menuPrincipal, frameTelaCadastroConvidado);

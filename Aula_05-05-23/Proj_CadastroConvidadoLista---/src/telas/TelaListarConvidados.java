@@ -17,15 +17,12 @@ public class TelaListarConvidados {
 		
 		int qtdLinhas = listaConvidados.size(); // Logica para contagem de linhas, se baseia no numero de inserções de convidados
 		
-		String [][] tabelaString  = new String [qtdLinhas][6];
+		String [][] tabelaString  = new String [qtdLinhas][4];
 		
 		int posicaoColuna = 0; // Inicia a contagem do indice 0
 		int posicaoLinha = 0; 
 		
 		for (Convidado convidado: listaConvidados) {
-			
-			tabelaString [posicaoLinha][posicaoColuna] = convidado.getCpf();	
-			posicaoColuna++;
 			
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getNome();			
 			posicaoColuna++; // ESTÁ LÓGICA PODE SER REESCRITA: posicaoColuna = posicaoColuna + 1
@@ -36,16 +33,13 @@ public class TelaListarConvidados {
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getProfissao();
 			posicaoColuna++;
 			
-			tabelaString [posicaoLinha][posicaoColuna] = convidado.getEmail();	
-			posicaoColuna++;
-			
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getConvite();
 			posicaoLinha++;
 			posicaoColuna = 0;
 		}
 		
 		
-		String nomesColunas[] = {"CPF", "NOME", "ENDEREÇO", "PROFISSÃO", "EMAIL", "CONVITE"};
+		String nomesColunas[] = {"NOME", "ENDEREÇO", "PROFISSÃO", "CONVITE"};
 		
 		JFrame frameListarConvidados = new JFrame();
 		frameListarConvidados.setSize(500,600);

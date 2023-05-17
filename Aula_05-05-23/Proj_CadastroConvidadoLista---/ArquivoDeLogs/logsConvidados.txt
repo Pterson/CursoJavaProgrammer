@@ -1,0 +1,8 @@
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-12T23:51:28.808716900 -- O convidado John Roll que tem o convite 003 foi cadastrado!
+
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-12T23:55:01.982342500 -- O convidado Ralf Calbum que tem o convite 002 foi alterado!
+

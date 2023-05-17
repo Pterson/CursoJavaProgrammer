@@ -11,10 +11,5 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Repositorio_GitHub/Meu_Repositorio/CursoJavaProgrammer/Aula_05-05-23/Proj_CadastroConvidadoLista/lib/mail-1.4.7.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

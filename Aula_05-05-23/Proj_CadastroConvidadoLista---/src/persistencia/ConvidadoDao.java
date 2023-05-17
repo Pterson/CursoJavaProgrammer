@@ -21,7 +21,7 @@ public class ConvidadoDao {
 		
 		boolean salvamento = false; // Resposta do metodo
 		
-		String comandoSqlInsert = "INSERT INTO tabela_convidado (cpf, nome, endereco, profissao, email, convite) VALUES (?, ?, ?, ?, ?, ?)";
+		String comandoSqlInsert = "INSERT INTO tabela_convidado (nome, endereco, profissao, convite) VALUES (?, ?, ?, ?)";
 		
 		
 		
@@ -34,12 +34,10 @@ public class ConvidadoDao {
 			
 			declaracaoComando = (PreparedStatement)conexaoRecebida.prepareStatement(comandoSqlInsert); //Preparação do comando recebendo o banco com o comando sql
 		
-			declaracaoComando.setString(1, convidado.getCpf());
-			declaracaoComando.setString(2, convidado.getNome());
-			declaracaoComando.setString(3, convidado.getEndereco());
-			declaracaoComando.setString(4, convidado.getProfissao());
-			declaracaoComando.setString(5, convidado.getEmail());
-			declaracaoComando.setString(6, convidado.getConvite());
+			declaracaoComando.setString(1, convidado.getNome());
+			declaracaoComando.setString(2, convidado.getEndereco());
+			declaracaoComando.setString(3, convidado.getProfissao());
+			declaracaoComando.setString(4, convidado.getConvite());
 		
 			declaracaoComando.execute();
 			
@@ -153,11 +151,9 @@ public class ConvidadoDao {
 				  
 				Convidado convidado = new Convidado();
 				
-				convidado.setCpf(resultadoTabela.getString("cpf"));
 				convidado.setNome(resultadoTabela.getString("nome"));
 				convidado.setEndereco(resultadoTabela.getString("endereco"));
 				convidado.setProfissao(resultadoTabela.getString("profissao"));
-				convidado.setEmail(resultadoTabela.getString("email"));
 				convidado.setConvite(resultadoTabela.getString("convite"));
 				
 				listaConvidadosDoBanco.add(convidado);				
@@ -199,7 +195,7 @@ public class ConvidadoDao {
 		FabricaConexao fabricaConexao = new FabricaConexao();
 		boolean alteracao = false; // Resposta do metodo
 		
-		String comandoSqlUpdate = "UPDATE tabela_convidado SET cpf = ?, nome = ?, endereco = ?, profissao = ?, email = ?, convite = ? WHERE cpf = ?";
+		String comandoSqlUpdate = "UPDATE tabela_convidado SET nome = ?, endereco = ?, profissao = ?, convite = ? WHERE convite = ?";
 			
 				Connection conexaoRecebida = null; // recebe a conexao
 				PreparedStatement declaracaoComando = null; // preparação do comando
@@ -209,15 +205,13 @@ public class ConvidadoDao {
 			conexaoRecebida = fabricaConexao.criarConexao();
 					
 			declaracaoComando = (PreparedStatement)conexaoRecebida.prepareStatement(comandoSqlUpdate); //Preparação do comando recebendo o banco com o comando sql
+				
+			declaracaoComando.setString(1, convidadoNovo.getNome());
+			declaracaoComando.setString(2, convidadoNovo.getEndereco());
+			declaracaoComando.setString(3, convidadoNovo.getProfissao());
+			declaracaoComando.setString(4, convidadoNovo.getConvite());
 			
-			declaracaoComando.setString(1, convidadoNovo.getCpf());
-			declaracaoComando.setString(2, convidadoNovo.getNome());
-			declaracaoComando.setString(3, convidadoNovo.getEndereco());
-			declaracaoComando.setString(4, convidadoNovo.getProfissao());
-			declaracaoComando.setString(4, convidadoNovo.getEmail());
 			declaracaoComando.setString(5, convidadoNovo.getConvite());
-			
-			declaracaoComando.setString(5, convidadoNovo.getCpf());
 				
 			declaracaoComando.execute();
 			

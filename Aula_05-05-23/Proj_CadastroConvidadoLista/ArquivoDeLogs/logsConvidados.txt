@@ -6,3 +6,11 @@
 ------ INFORMAÇÕES DOS LOGS ------
 2023-05-12T23:55:01.982342500 -- O convidado Ralf Calbum que tem o convite 002 foi alterado!
 
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-17T17:38:17.791914300 -- O convidado Peterson que tem o convite 001 foi cadastrado!
+
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-17T19:37:49.898933800 -- O convidado John Calvin que tem o convite 013 foi cadastrado!
+
