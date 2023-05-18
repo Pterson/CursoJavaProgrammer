@@ -35,10 +35,10 @@ public class ConvidadoDao {
 			declaracaoComando = (PreparedStatement)conexaoRecebida.prepareStatement(comandoSqlInsert); //Preparação do comando recebendo o banco com o comando sql
 		
 			declaracaoComando.setString(1, convidado.getCpf());
-			declaracaoComando.setString(2, convidado.getNome());
-			declaracaoComando.setString(3, convidado.getEndereco());
-			declaracaoComando.setString(4, convidado.getProfissao());
-			declaracaoComando.setString(5, convidado.getEmail());
+			declaracaoComando.setString(2, convidado.getNome().toUpperCase()); // Upper Case utilizando para salvar em maiuscula no banco
+			declaracaoComando.setString(3, convidado.getEndereco().toUpperCase());
+			declaracaoComando.setString(4, convidado.getProfissao().toUpperCase());
+			declaracaoComando.setString(5, convidado.getEmail().toUpperCase());
 			declaracaoComando.setString(6, convidado.getConvite());
 		
 			declaracaoComando.execute();
@@ -81,7 +81,7 @@ public class ConvidadoDao {
 		FabricaConexao fabricaConexao = new FabricaConexao();
 		boolean exclusao = false; // Resposta do metodo
 		
-		String comandoSqlDeletar = "DELETE FROM tabela_convidado WHERE convite = ?";
+		String comandoSqlDeletar = "DELETE FROM tabela_convidado WHERE cpf = ?";
 			
 				Connection conexaoRecebida = null; // recebe a conexao
 				PreparedStatement declaracaoComando = null; // preparação do comando 
@@ -199,8 +199,8 @@ public class ConvidadoDao {
 		FabricaConexao fabricaConexao = new FabricaConexao();
 		boolean alteracao = false; // Resposta do metodo
 		
-		String comandoSqlUpdate = "UPDATE tabela_convidado SET cpf = ?, nome = ?, endereco = ?, profissao = ?, email = ?, convite = ? WHERE cpf = ?";
-			
+		String comandoSqlUpdate = "UPDATE INTO tabela_convidado SET cpf = ?, nome = ?, endereco = ?, profissao = ?, email = ?, convite = ? WHERE cpf = ?";
+				
 				Connection conexaoRecebida = null; // recebe a conexao
 				PreparedStatement declaracaoComando = null; // preparação do comando
 		

@@ -13,7 +13,7 @@ public class LogCrudConvidado {
 	public void gravarArquivoLogConvidado(Convidado convidado, String tipoDeOperacao) {
 		
 		LogDao logDao = new LogDao();
-		LocalDateTime horaAtual = LocalDateTime.now();
+		LocalDateTime horaAtual = LocalDateTime.now(); //Inserindo hora do sistema no log                       
 		
 		String enderecoLog = "D:\\Repositorio_GitHub\\Meu_Repositorio\\CursoJavaProgrammer\\Aula_05-05-23\\Proj_CadastroConvidadoLista\\ArquivoDeLogs\\logsConvidados.txt";
 		String escrita = "";
@@ -46,7 +46,7 @@ public class LogCrudConvidado {
 			
             System.out.println("LOG SALVO!!!");
 			
-		//	logDao.registrarLog(escrita);
+			logDao.registrarLog(convidado, escrita);
 
 		} catch (IOException e) {
 

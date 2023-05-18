@@ -25,10 +25,10 @@ public class TelaListarConvidados {
 		for (Convidado convidado: listaConvidados) {
 			
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getCpf();	
-			posicaoColuna++;
+			posicaoColuna++; // ESTÁ LÓGICA PODE SER REESCRITA: posicaoColuna = posicaoColuna + 1
 			
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getNome();			
-			posicaoColuna++; // ESTÁ LÓGICA PODE SER REESCRITA: posicaoColuna = posicaoColuna + 1
+			posicaoColuna++; 
 			
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getEndereco();			
 			posicaoColuna++;

@@ -20,20 +20,26 @@ public class TelaLocalizaAlterarConvidado {
 		
 		int qtdLinhas = listaConvidados.size();
 		
-		String [][] tabelaString  = new String [qtdLinhas][4];
+		String [][] tabelaString  = new String [qtdLinhas][6];
 		
 		int posicaoColuna = 0;
 		int posicaoLinha = 0;
 		
 		for (Convidado convidado: listaConvidados) {
 			
-			tabelaString [posicaoLinha][posicaoColuna] = convidado.getNome();			
+			tabelaString [posicaoLinha][posicaoColuna] = convidado.getCpf();			
 			posicaoColuna++; // ESTÁ LÓGICA PODE SER REESCRITA: posicaoColuna = posicaoColuna + 1
+			
+			tabelaString [posicaoLinha][posicaoColuna] = convidado.getNome();			
+			posicaoColuna++; 
 			
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getEndereco();			
 			posicaoColuna++;
 			
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getProfissao();
+			posicaoColuna++;
+			
+			tabelaString [posicaoLinha][posicaoColuna] = convidado.getEmail();			
 			posicaoColuna++;
 			
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getConvite();
@@ -42,7 +48,7 @@ public class TelaLocalizaAlterarConvidado {
 		}
 		
 		
-		String nomesColunas[] = {"NOME", "ENDEREÇO", "PROFISSÃO", "CONVITE"};
+		String nomesColunas[] = {"CPF", "NOME", "ENDEREÇO", "PROFISSÃO", "EMAIL", "CONVITE"};
 		
 		JFrame frameAlterarConvidados = new JFrame();
 		frameAlterarConvidados.setSize(500,600);
@@ -57,11 +63,11 @@ public class TelaLocalizaAlterarConvidado {
 		JScrollPane scrollPaneAlterarConvidados = new JScrollPane(tabelaConvidados);		
 		panelAlterarConvidados.add(scrollPaneAlterarConvidados);
 		
-		JLabel labelConvite = new JLabel("Digite o convite para alterar:");
-		panelAlterarConvidados.add(labelConvite);
+		JLabel labelCpf = new JLabel("Digite o CPF para alterar:");
+		panelAlterarConvidados.add(labelCpf);
 		
-		JTextField textConviteDelete = new JTextField(10);
-		panelAlterarConvidados.add(textConviteDelete);
+		JTextField textCpfDelete = new JTextField(10);
+		panelAlterarConvidados.add(textCpfDelete);
 		
 		JButton alterarTelaAlterarConvidado = new JButton("Alterar");
 		panelAlterarConvidados.add(alterarTelaAlterarConvidado);
@@ -72,7 +78,7 @@ public class TelaLocalizaAlterarConvidado {
 		frameAlterarConvidados.add(panelAlterarConvidados);
 		frameAlterarConvidados.setVisible(true);
 		
-		ControladorTelaLocalizaAlterarConvidado alterarConvidado = new ControladorTelaLocalizaAlterarConvidado(telaListaConvidados, frameAlterarConvidados, repositorioConvidado, textConviteDelete);
+		ControladorTelaLocalizaAlterarConvidado alterarConvidado = new ControladorTelaLocalizaAlterarConvidado (telaListaConvidados, frameAlterarConvidados, repositorioConvidado, textCpfDelete);
 		
 		alterarTelaAlterarConvidado.addActionListener(alterarConvidado);
 		voltarTelaAlterarConvidado.addActionListener(alterarConvidado);

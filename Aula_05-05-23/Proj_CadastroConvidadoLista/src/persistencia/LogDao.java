@@ -11,7 +11,8 @@ public class LogDao {
 		
 		FabricaConexao fabricaConexao = new FabricaConexao();
 		
-		String insertLogComando = "insert into tabela_log(escrita_log) values(?)"; // Comando sql que será executado
+		String insertLogComando = "INSERT INTO  tabela_log(escrita_log) VALUES(?)"; // Comando sql que será executado
+		
 		
 		Connection conexao = null;
 		PreparedStatement declaracaoComando = null;
@@ -30,7 +31,7 @@ public class LogDao {
 			System.out.println("ERRO ao registrar Log");
 			
 		} finally {
-			try {
+			try {// este try é para fechar as conexões
 				
 				if(conexao != null) {
 					conexao.close();

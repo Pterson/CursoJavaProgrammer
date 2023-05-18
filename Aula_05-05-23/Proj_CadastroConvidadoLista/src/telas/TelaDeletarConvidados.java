@@ -20,12 +20,15 @@ public class TelaDeletarConvidados {
 		
         int qtdLinhas = listaConvidados.size(); // Logica para contagem de linhas, se baseia no numero de inserções de convidados
 		
-		String [][] tabelaString  = new String [qtdLinhas][4];
+		String [][] tabelaString  = new String [qtdLinhas][6];
 		
 		int posicaoColuna = 0; // Inicia a contagem do indice 0
 		int posicaoLinha = 0;
 		
 		for (Convidado convidado: listaConvidados) {
+			
+			tabelaString [posicaoLinha][posicaoColuna] = convidado.getCpf();			
+			posicaoColuna++;			
 			
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getNome();			
 			posicaoColuna++;
@@ -36,13 +39,16 @@ public class TelaDeletarConvidados {
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getProfissao();
 			posicaoColuna++;
 			
+			tabelaString [posicaoLinha][posicaoColuna] = convidado.getEmail();			
+			posicaoColuna++;
+			
 			tabelaString [posicaoLinha][posicaoColuna] = convidado.getConvite();
 			posicaoLinha++;
 			posicaoColuna = 0;
 		}
 		
 		
-		String nomesColunas[] = {"NOME", "ENDEREÇO", "PROFISSÃO", "CONVITE"};
+		String nomesColunas[] = {"CPF", "NOME", "ENDEREÇO", "PROFISSÃO", "EMAIL", "CONVITE"};
 		
 		JFrame frameDeletarConvidados = new JFrame();
 		frameDeletarConvidados.setSize(500,600);
@@ -57,11 +63,11 @@ public class TelaDeletarConvidados {
 		JPanel panelListarConvidados = new JPanel();
 		
 		
-	    JLabel labelConvite = new JLabel("Inserir o número do convite para deletar:");
-	    panelListarConvidados.add(labelConvite);
+	    JLabel labelCpf= new JLabel("Insirá o CPF para deletar:");
+	    panelListarConvidados.add(labelCpf);
 	    
-	    JTextField textConvite = new JTextField(10);
-	    panelListarConvidados.add(textConvite);		
+	    JTextField textCpf = new JTextField(10);
+	    panelListarConvidados.add(textCpf);		
 		
 		
 		panelListarConvidados.add(scrollPaneListarConvidados);
@@ -76,7 +82,7 @@ public class TelaDeletarConvidados {
 		frameDeletarConvidados.setVisible(true);
 		
 		
-		ControladorTelaDeletarConvidados controladorTelaDeletarConvidados = new ControladorTelaDeletarConvidados(menuPrincipal, frameDeletarConvidados, textConvite, repositorioConvidado);
+		ControladorTelaDeletarConvidados controladorTelaDeletarConvidados = new ControladorTelaDeletarConvidados(menuPrincipal, frameDeletarConvidados, textCpf, repositorioConvidado);
 		
 		
 		deletarTelaConvidados.addActionListener(controladorTelaDeletarConvidados);

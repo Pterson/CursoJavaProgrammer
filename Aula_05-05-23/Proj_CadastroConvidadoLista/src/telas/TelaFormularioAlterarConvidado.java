@@ -16,9 +16,11 @@ public class TelaFormularioAlterarConvidado {
 
 	public void formularioAlterarConvidado(Convidado convidadoEncontrado, JFrame frameMenuPrincipal, RepositorioConvidado repositorioConvidadoRecebido) {
 		
+		String cpf = "Digite o cpf:";
 		String nome = "Digite o nome:";	
 		String endereco = "Digite o endereço:";
 		String profissao = "Digite a profissão:";
+		String email = "Digite o email:";
 		String convite = "Digite o convite:";
 		
 		JFrame frameFormularioAlterarConvidado = new JFrame();	
@@ -28,8 +30,17 @@ public class TelaFormularioAlterarConvidado {
 		
 		
 		JPanel panelFormularioAlterar = new JPanel();
-		GridLayout grid = new GridLayout (0,1);
+		GridLayout grid = new GridLayout (0,1);		
 		panelFormularioAlterar.setLayout(grid);
+		
+		
+		JLabel labelCpf = new JLabel(cpf);
+		panelFormularioAlterar.add(labelCpf);
+		
+		JTextField textCpf = new  JTextField(10);
+		textCpf.setText(convidadoEncontrado.getCpf());
+		textCpf.setEditable(false); // MÉTODO COM O VALOR FALSE, O CAMPO DE TEXTO FICARÁ BLOQUEADO PARA EDIÇÕA
+		panelFormularioAlterar.add(textCpf);
 		
 		
 		JLabel labelNome = new JLabel(nome);
@@ -56,12 +67,19 @@ public class TelaFormularioAlterarConvidado {
 		panelFormularioAlterar.add(textProfissao);
 		
 		
+		JLabel labelEmail = new JLabel(email);
+		panelFormularioAlterar.add(labelEmail);
+		
+		JTextField textEmail = new  JTextField(10);
+		textCpf.setText(convidadoEncontrado.getEmail());
+		panelFormularioAlterar.add(textEmail);
+		
+		
 		JLabel labelConvite = new JLabel(convite);
 		panelFormularioAlterar.add(labelConvite);
 		
 		JTextField textConvite = new  JTextField(10);		
-		textConvite.setText(convidadoEncontrado.getConvite()); // Adicionará o convite do convidado encontrado no Campo de texto do nome		
-		textConvite.setEditable(false); // Com esse parametro false não é possivel alterar o campo
+		textConvite.setText(convidadoEncontrado.getConvite()); // Adicionará o convite do convidado encontrado no Campo de texto do nome			
 		panelFormularioAlterar.add(textConvite);
 		
 		
@@ -71,7 +89,7 @@ public class TelaFormularioAlterarConvidado {
 		frameFormularioAlterarConvidado.setVisible(true);
 		
 		ControladorTelaFormularioAlterarConvidado controladorTelaFormularioAlterarConvidado = new ControladorTelaFormularioAlterarConvidado(
-		frameMenuPrincipal, frameFormularioAlterarConvidado, textNome, textEndereco, textProfissao, textConvite, repositorioConvidadoRecebido, convidadoEncontrado);
+		frameMenuPrincipal, frameFormularioAlterarConvidado, textCpf, textNome, textEndereco, textProfissao, textEmail, textConvite, repositorioConvidadoRecebido, convidadoEncontrado);
 		buttonTelaCadastroConvidado.addActionListener(controladorTelaFormularioAlterarConvidado);
 	
 	}

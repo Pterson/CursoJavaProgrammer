@@ -35,11 +35,15 @@ public class TelaCadastroConvidado {
 		GridLayout grid = new GridLayout (0,1);
 		panelTelaCadastroConvidado.setLayout(grid);
 		
+		//----
+		
 		JLabel labelCpf = new JLabel(cpf);
 		panelTelaCadastroConvidado.add(labelCpf);
 		
 		JTextField textCpf = new  JTextField(10);
 		panelTelaCadastroConvidado.add(textCpf);		
+		
+		//----
 		
 		JLabel labelNome = new JLabel(nome);
 		panelTelaCadastroConvidado.add(labelNome);
@@ -47,11 +51,15 @@ public class TelaCadastroConvidado {
 		JTextField textNome = new  JTextField(10);
 		panelTelaCadastroConvidado.add(textNome);
 		
+		//----
+		
 		JLabel labelEndereco = new JLabel(endereco);
 		panelTelaCadastroConvidado.add(labelEndereco);
 		
 		JTextField textEndereco = new  JTextField(10);
 		panelTelaCadastroConvidado.add(textEndereco);
+		
+		//----
 		
 		JLabel labelProfissao = new JLabel(profissao);
 		panelTelaCadastroConvidado.add(labelProfissao);
@@ -59,17 +67,23 @@ public class TelaCadastroConvidado {
 		JTextField textProfissao = new  JTextField(10);
 		panelTelaCadastroConvidado.add(textProfissao);
 		
+		//----
+		
 		JLabel labelEmail = new JLabel(email);
 		panelTelaCadastroConvidado.add(labelEmail);
 		
 		JTextField textEmail = new  JTextField(10);
 		panelTelaCadastroConvidado.add(textEmail);
 		
+		//----
+		
 		JLabel labelConvite = new JLabel(convite);
 		panelTelaCadastroConvidado.add(labelConvite);
 		
 		JTextField textConvite = new  JTextField(10);
 		panelTelaCadastroConvidado.add(textConvite);
+		
+		//----
 		
 		
 		JButton buttonTelaCadastroConvidado = new JButton("Enviar");

@@ -12,24 +12,24 @@ import repositorio.RepositorioConvidado;
 import telas.TelaFormularioAlterarConvidado;
 
 
-public class ControladorTelaLocalizaAlterarConvidado implements ActionListener{
+public class ControladorTelaLocalizaAlterarConvidado implements ActionListener {
 	
 	JFrame menuPrincipalRecebido;
 	JFrame frameAlterarRecebido;	
 	RepositorioConvidado RepositorioConvidadoRecebido;
-	JTextField textConviteRecebido;
-	
+	JTextField textCpfRecebido;
 
+	
 	public ControladorTelaLocalizaAlterarConvidado(JFrame menuPrincipalRecebido, JFrame frameAlterarRecebido,
-			RepositorioConvidado repositorioConvidadoRecebido, JTextField textConviteRecebido) {
-		super();
+			RepositorioConvidado repositorioConvidadoRecebido, JTextField textCpfRecebido) {
+		
 		this.menuPrincipalRecebido = menuPrincipalRecebido;
 		this.frameAlterarRecebido = frameAlterarRecebido;
 		RepositorioConvidadoRecebido = repositorioConvidadoRecebido;
-		this.textConviteRecebido = textConviteRecebido;
+		this.textCpfRecebido = textCpfRecebido;		
 	}
 	
-	
+
 	TelaFormularioAlterarConvidado formularioAlterarConvidado = new TelaFormularioAlterarConvidado();
 
 	@Override
@@ -41,7 +41,7 @@ public class ControladorTelaLocalizaAlterarConvidado implements ActionListener{
 		if(botao.equals("Alterar")) {
 			Convidado convidadoAlterar = new Convidado(); // iniciando o objeto convidado que será alterado
 			
-			convidadoAlterar = RepositorioConvidadoRecebido.buscarConvidado(textConviteRecebido.getText()); //Armazena o convidado que foi encontrado na lista(Retorna null se não encontrar)
+			convidadoAlterar = RepositorioConvidadoRecebido.buscarConvidado(textCpfRecebido.getText()); //Armazena o convidado que foi encontrado na lista(Retorna null se não encontrar)
 			
 			//Condição caso o convidado não seja localizado
 			if(convidadoAlterar != null) {

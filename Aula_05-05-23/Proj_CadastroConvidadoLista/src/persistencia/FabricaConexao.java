@@ -18,13 +18,13 @@ public class FabricaConexao {
 			
 			conexao = DriverManager.getConnection(BANCO_URL, USUARIO, SENHA); // Cria conexão 
 			
-			System.out.println("CONECTOU no BANCO");
+			System.out.println("CONECTOU AO BANCO");
 		
 
 		}catch (Exception e) {
 			conexao = null;
 
-			System.out.println("FALHA ao conectar no BANCO");
+			System.out.println("FALHA NA CONEXÃO AO BANCO");
 			
 			System.out.println(e);
 		}
