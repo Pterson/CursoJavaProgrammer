@@ -10,7 +10,7 @@ public class FabricaConexao {
 	
 	private static String BANCO_URL = "jdbc:mysql://localhost:3306/db_cadastro_convidado?useTimezone=true&serverTimezone=UTC"; //URL do banco ou seja o endereço
 	
-	public static Connection criarConexao() {
+	public Connection criarConexao() {
 		Connection conexao;
 		try {
 			

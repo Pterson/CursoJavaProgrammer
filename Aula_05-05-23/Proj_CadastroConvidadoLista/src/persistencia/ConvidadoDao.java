@@ -199,7 +199,7 @@ public class ConvidadoDao {
 		FabricaConexao fabricaConexao = new FabricaConexao();
 		boolean alteracao = false; // Resposta do metodo
 		
-		String comandoSqlUpdate = "UPDATE INTO tabela_convidado SET cpf = ?, nome = ?, endereco = ?, profissao = ?, email = ?, convite = ? WHERE cpf = ?";
+		String comandoSqlUpdate = "UPDATE tabela_convidado SET cpf = ?, nome = ?, endereco = ?, profissao = ?, email = ?, convite = ? WHERE cpf = ?";
 				
 				Connection conexaoRecebida = null; // recebe a conexao
 				PreparedStatement declaracaoComando = null; // preparação do comando
@@ -214,10 +214,10 @@ public class ConvidadoDao {
 			declaracaoComando.setString(2, convidadoNovo.getNome());
 			declaracaoComando.setString(3, convidadoNovo.getEndereco());
 			declaracaoComando.setString(4, convidadoNovo.getProfissao());
-			declaracaoComando.setString(4, convidadoNovo.getEmail());
-			declaracaoComando.setString(5, convidadoNovo.getConvite());
+			declaracaoComando.setString(5, convidadoNovo.getEmail());
+			declaracaoComando.setString(6, convidadoNovo.getConvite());
 			
-			declaracaoComando.setString(5, convidadoNovo.getCpf());
+			declaracaoComando.setString(7, convidadoNovo.getCpf());
 				
 			declaracaoComando.execute();
 			

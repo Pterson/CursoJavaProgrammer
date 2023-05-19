@@ -21,15 +21,15 @@ public class LogCrudConvidado {
 		switch (tipoDeOperacao) {
 		
 			case  "Deletar":
-				escrita = horaAtual + " -- O convidado " + convidado.getNome() + " que tem o convite "+ convidado.getConvite() + "foi excluido!";
+				escrita = horaAtual + " -- O convidado " + convidado.getNome() + " que tem o CPF "+ convidado.getCpf() + "foi excluido!";
 				break;
 			
 			case  "Alterar":
-				escrita = horaAtual + " -- O convidado " + convidado.getNome() + " que tem o convite "+ convidado.getConvite() + " foi alterado!";
+				escrita = horaAtual + " -- O convidado " + convidado.getNome() + " que tem o CPF "+ convidado.getCpf() + " foi alterado!";
 				break;
 			
 			case  "Cadastrar":
-				escrita = horaAtual + " -- O convidado " + convidado.getNome() + " que tem o convite "+ convidado.getConvite() + " foi cadastrado!" ;
+				escrita = horaAtual + " -- O convidado " + convidado.getNome() + " que tem o CPF "+ convidado.getCpf() + " foi cadastrado!" ;
 				break;		
 		}
 		

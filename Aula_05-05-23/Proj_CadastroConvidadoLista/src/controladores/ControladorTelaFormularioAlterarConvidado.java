@@ -23,12 +23,11 @@ public class ControladorTelaFormularioAlterarConvidado implements ActionListener
 	RepositorioConvidado repositorioConvidadoRecebido;
 	Convidado convidadoAtual;
 	
-	
-	public ControladorTelaFormularioAlterarConvidado(JFrame frameMenuInicial, JFrame frameFormularioAlterar,
-			JTextField textCpfRecebido, JTextField textNomeRecebido, JTextField textEnderecoRecebido,
-			JTextField textProfissaoRecebido, JTextField textEmailRecebido, JTextField textConviteRecebido,
-			RepositorioConvidado repositorioConvidadoRecebido, Convidado convidadoAtual) {
-		super();
+	public ControladorTelaFormularioAlterarConvidado(JFrame frameMenuPrincipal, JFrame frameFormularioAlterarConvidado,
+			JTextField textCpf, JTextField textNome, JTextField textEndereco, JTextField textProfissao,
+			JTextField textEmail, JTextField textConvite, RepositorioConvidado repositorioConvidadoRecebido,
+			Convidado convidadoEncontrado) {
+		
 		this.frameMenuInicial = frameMenuInicial;
 		this.frameFormularioAlterar = frameFormularioAlterar;
 		this.textCpfRecebido = textCpfRecebido;
@@ -39,9 +38,8 @@ public class ControladorTelaFormularioAlterarConvidado implements ActionListener
 		this.textConviteRecebido = textConviteRecebido;
 		this.repositorioConvidadoRecebido = repositorioConvidadoRecebido;
 		this.convidadoAtual = convidadoAtual;
+		
 	}
-	
-	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 

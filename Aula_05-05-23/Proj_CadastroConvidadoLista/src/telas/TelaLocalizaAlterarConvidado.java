@@ -78,7 +78,7 @@ public class TelaLocalizaAlterarConvidado {
 		frameAlterarConvidados.add(panelAlterarConvidados);
 		frameAlterarConvidados.setVisible(true);
 		
-		ControladorTelaLocalizaAlterarConvidado alterarConvidado = new ControladorTelaLocalizaAlterarConvidado (telaListaConvidados, frameAlterarConvidados, repositorioConvidado, textCpfDelete);
+		ControladorTelaLocalizaAlterarConvidado alterarConvidado = new ControladorTelaLocalizaAlterarConvidado (textCpfDelete, telaListaConvidados, frameAlterarConvidados, repositorioConvidado);
 		
 		alterarTelaAlterarConvidado.addActionListener(alterarConvidado);
 		voltarTelaAlterarConvidado.addActionListener(alterarConvidado);

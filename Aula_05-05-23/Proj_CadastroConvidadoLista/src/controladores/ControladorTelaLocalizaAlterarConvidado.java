@@ -14,24 +14,24 @@ import telas.TelaFormularioAlterarConvidado;
 
 public class ControladorTelaLocalizaAlterarConvidado implements ActionListener {
 	
+	JTextField textCpfRecebido;
 	JFrame menuPrincipalRecebido;
 	JFrame frameAlterarRecebido;	
-	RepositorioConvidado RepositorioConvidadoRecebido;
-	JTextField textCpfRecebido;
-
+	RepositorioConvidado RepositorioConvidadoRecebido;	
 	
-	public ControladorTelaLocalizaAlterarConvidado(JFrame menuPrincipalRecebido, JFrame frameAlterarRecebido,
-			RepositorioConvidado repositorioConvidadoRecebido, JTextField textCpfRecebido) {
-		
+	
+	public ControladorTelaLocalizaAlterarConvidado(JTextField textCpfRecebido, JFrame menuPrincipalRecebido,
+			JFrame frameAlterarRecebido, RepositorioConvidado repositorioConvidadoRecebido) {
+	
+		this.textCpfRecebido = textCpfRecebido;
 		this.menuPrincipalRecebido = menuPrincipalRecebido;
 		this.frameAlterarRecebido = frameAlterarRecebido;
 		RepositorioConvidadoRecebido = repositorioConvidadoRecebido;
-		this.textCpfRecebido = textCpfRecebido;		
 	}
 	
 
 	TelaFormularioAlterarConvidado formularioAlterarConvidado = new TelaFormularioAlterarConvidado();
-
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
