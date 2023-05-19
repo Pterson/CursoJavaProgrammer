@@ -10,24 +10,25 @@ import entidades.Convidado;
 import repositorio.RepositorioConvidado;
 
 public class ControladorTelaFormularioAlterarConvidado implements ActionListener{
-	
-	
+
+
 	JFrame frameMenuInicial;
 	JFrame frameFormularioAlterar;
 	JTextField textCpfRecebido;
-	JTextField textNomeRecebido;	
+	JTextField textNomeRecebido;
 	JTextField textEnderecoRecebido;
 	JTextField textProfissaoRecebido;
 	JTextField textEmailRecebido;
 	JTextField textConviteRecebido;
 	RepositorioConvidado repositorioConvidadoRecebido;
 	Convidado convidadoAtual;
-	
-	public ControladorTelaFormularioAlterarConvidado(JFrame frameMenuPrincipal, JFrame frameFormularioAlterarConvidado,
-			JTextField textCpf, JTextField textNome, JTextField textEndereco, JTextField textProfissao,
-			JTextField textEmail, JTextField textConvite, RepositorioConvidado repositorioConvidadoRecebido,
-			Convidado convidadoEncontrado) {
-		
+
+
+	public ControladorTelaFormularioAlterarConvidado(JFrame frameMenuInicial, JFrame frameFormularioAlterar,
+			JTextField textCpfRecebido, JTextField textNomeRecebido, JTextField textEnderecoRecebido,
+			JTextField textProfissaoRecebido, JTextField textEmailRecebido, JTextField textConviteRecebido,
+			RepositorioConvidado repositorioConvidadoRecebido, Convidado convidadoAtual) {
+
 		this.frameMenuInicial = frameMenuInicial;
 		this.frameFormularioAlterar = frameFormularioAlterar;
 		this.textCpfRecebido = textCpfRecebido;
@@ -38,30 +39,30 @@ public class ControladorTelaFormularioAlterarConvidado implements ActionListener
 		this.textConviteRecebido = textConviteRecebido;
 		this.repositorioConvidadoRecebido = repositorioConvidadoRecebido;
 		this.convidadoAtual = convidadoAtual;
-		
 	}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
 		repositorioConvidadoRecebido.alterarConvidado(popularConvidadoNovo());
-		
+
 		frameMenuInicial.setVisible(true);
-		
+
 		frameFormularioAlterar.setVisible(false);
 	}
 		public Convidado popularConvidadoNovo() {
 			Convidado convidadoNovo = new Convidado();
-			
+
 			convidadoNovo.setCpf(textCpfRecebido.getText());
-			convidadoNovo.setNome(textNomeRecebido.getText());			
+			convidadoNovo.setNome(textNomeRecebido.getText());
 			convidadoNovo.setEndereco(textEnderecoRecebido.getText());
 			convidadoNovo.setProfissao(textProfissaoRecebido.getText());
 			convidadoNovo.setEmail(textEmailRecebido.getText());
 			convidadoNovo.setConvite(textConviteRecebido.getText());
-			
+
 			return convidadoNovo;
 		}
-		
+
 }
 
 

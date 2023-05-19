@@ -53,12 +53,12 @@ public class RepositorioConvidado implements InterfaceRepositorio{
 		
 
 	@Override
-	public Convidado buscarConvidado(String convite) { //Busca o convidado de acordo com o CONVITE, se não encontrar o metodo retorna null
+	public Convidado buscarConvidado(String cpf) { //Busca o convidado de acordo com o CONVITE, se não encontrar o metodo retorna null
 		
 		
 		for (Convidado convidadoVerificado:retornarListaConvidados()) {
 			
-			if(convidadoVerificado.getConvite().equals(convite)) {
+			if(convidadoVerificado.getCpf().equals(cpf)) {
 				
 				return convidadoVerificado;
 			}

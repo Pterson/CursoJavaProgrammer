@@ -38,7 +38,7 @@ public class TelaFormularioAlterarConvidado {
 		panelFormularioAlterar.add(labelCpf);
 		
 		JTextField textCpf = new  JTextField(10);
-		textCpf.setText(convidadoEncontrado.getCpf());
+		textCpf.setText(convidadoEncontrado.getCpf()); // Adicionará o CPF do convidado encontrado no Campo de texto do nome
 		textCpf.setEditable(false); // MÉTODO COM O VALOR FALSE, O CAMPO DE TEXTO FICARÁ BLOQUEADO PARA EDIÇÕA
 		panelFormularioAlterar.add(textCpf);
 		
@@ -71,7 +71,7 @@ public class TelaFormularioAlterarConvidado {
 		panelFormularioAlterar.add(labelEmail);
 		
 		JTextField textEmail = new  JTextField(10);
-		textCpf.setText(convidadoEncontrado.getEmail());
+		textEmail.setText(convidadoEncontrado.getEmail());
 		panelFormularioAlterar.add(textEmail);
 		
 		
@@ -79,7 +79,7 @@ public class TelaFormularioAlterarConvidado {
 		panelFormularioAlterar.add(labelConvite);
 		
 		JTextField textConvite = new  JTextField(10);		
-		textConvite.setText(convidadoEncontrado.getConvite()); // Adicionará o convite do convidado encontrado no Campo de texto do nome			
+		textConvite.setText(convidadoEncontrado.getConvite()); 			
 		panelFormularioAlterar.add(textConvite);
 		
 		

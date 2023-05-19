@@ -22,3 +22,15 @@
 ------ INFORMAÇÕES DOS LOGS ------
 2023-05-18T17:54:30.389389100 -- O convidado Robert Jus que tem o convite 015 foi cadastrado!
 
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-19T09:18:51.694663500 -- O convidado peterson que tem o CPF 00011594020 foi cadastrado!
+
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-19T19:19:14.662820500 -- O convidado Matias Rojas que tem o CPF 91728552079 foi alterado!
+
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-19T19:24:12.022158400 -- O convidado Laura Ferreira que tem o CPF 81435371020 foi alterado!
+

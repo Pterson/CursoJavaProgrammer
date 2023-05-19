@@ -11,7 +11,7 @@ public class ControladorTelaListarConvidados implements ActionListener{
 	JFrame frameTelaListaConvidadosRecebido;
 	
 	public ControladorTelaListarConvidados(JFrame frameMenuConvidadoRecebido, JFrame frameTelaListaConvidadosRecebido) {
-		super();
+		
 		this.frameMenuConvidadoRecebido = frameMenuConvidadoRecebido;
 		this.frameTelaListaConvidadosRecebido = frameTelaListaConvidadosRecebido;
 	}
