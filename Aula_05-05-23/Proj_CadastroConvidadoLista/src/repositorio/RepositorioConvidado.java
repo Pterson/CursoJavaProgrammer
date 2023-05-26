@@ -35,7 +35,7 @@ public class RepositorioConvidado implements InterfaceRepositorio{
 		
 		boolean result;
 		
-		result = convidadoDao.deletarConvidadoConvite(convidado.getConvite());
+		result = convidadoDao.deletarConvidadoCpf(convidado.getCpf());
 		
 		/*
 		try {			

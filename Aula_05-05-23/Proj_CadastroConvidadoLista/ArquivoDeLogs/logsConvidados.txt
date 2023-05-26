@@ -34,3 +34,19 @@
 ------ INFORMAÇÕES DOS LOGS ------
 2023-05-19T19:24:12.022158400 -- O convidado Laura Ferreira que tem o CPF 81435371020 foi alterado!
 
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-23T11:38:04.062050300 -- O convidado Bruno Silva que tem o CPF 03474013092 foi cadastrado!
+
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-23T11:38:43.033650800 -- O convidado Laura Ferreira que tem o CPF 81435371020 foi alterado!
+
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-25T22:14:13.621151200 -- O convidado BRUNO SANTOS que tem o CPF 03474013092 foi alterado!
+
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-25T23:11:32.900541 -- O convidado Gabriela Martins que tem o CPF 16217957051 foi alterado!
+

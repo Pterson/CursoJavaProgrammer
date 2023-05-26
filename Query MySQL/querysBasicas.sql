@@ -7,19 +7,25 @@ EMAIL varchar(80),
 CONVITE varchar(10)
 );
 
-DROP TABLE tabela_convidado;
+
+
+DROP TABLE tabela_usuarios;
 
 CREATE TABLE tabela_log( escrita_Log varchar(200) );
 
 SELECT * FROM tabela_convidado;
 
+SELECT cpf, nome, endereco, profissao, email, convite FROM tabela_convidado ORDER BY convite ASC;
+
+SELECT * FROM tabela_log;
+ALTER TABLE tabela_log RENAME COLUMN escrita_Log TO ESCRITA_LOG;
+INSERT INTO tabela_log (escrita_Log) VALUES ("INICIANDO");
+
 INSERT INTO tabela_convidado (nome, endereco, profissao, convite) VALUES ("John", "Rua Wyzo", "Dev Junior", "002");
 
 DELETE FROM tabela_convidado WHERE convite = "008";
 
-UPDATE tabela_convidado SET nome = 'Cabral' WHERE convite = 008;
-
-SET SQL_SAFE_UPDATES = 0; /* desabilitar o safe mode*/
+UPDATE tabela_convidado SET cpf = '016' WHERE nome = 'Matheus';
 
 ALTER TABLE tabela_convidado RENAME COLUMN nome TO NOME, RENAME COLUMN endereco TO ENDERECO, RENAME COLUMN PROFISSAO TO PROFISSAO, RENAME COLUMN CONVITE TO CONVITE;  
 
@@ -35,5 +41,39 @@ VALUES
 ("16217957051", "Gabriel Martins", "Alameda dos Lírios", "Enfermeiro(a)", "martinsg@outlook.com", "011"),
 ("81435371020", "Laura Ferreira", "Travessa das Orquídeas", "Jornalista", "laura@outlook.com", "012"), 
 ("91728552079", "Matheus Sousa","Rua dos Girassóis", "Programador(a)", "sousam@outlook.com", "013");
+
+
+/******************************DB USUARIOS****************************/
+
+USE db_usuarios;
+SELECT * FROM tabela_usuarios;
+CREATE TABLE tabela_usuarios(
+MATRICULA varchar(15),
+NOME varchar(100),
+ENDERECO varchar (100),
+TIPO_USUARIO varchar (50),
+SENHA varchar(100)
+);
+
+INSERT INTO tabela_usuarios (matricula, nome, endereco, tipo_usuario, senha)
+VALUES 
+("0000", "Peterson", "Rua Diamantes", "ADM", "0007");
+
+
+
+/******************************COMANDOS DE CONFIGURAÇÃO****************************/
+
+SET SQL_SAFE_UPDATES = 0; /* desabilitar o safe mode*/
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -76,7 +76,7 @@ public class ConvidadoDao {
 	}
 	
 	
-	public boolean deletarConvidadoConvite(String convite) {
+	public boolean deletarConvidadoCpf(String cpf) {
 		
 		FabricaConexao fabricaConexao = new FabricaConexao();
 		boolean exclusao = false; // Resposta do metodo
@@ -92,7 +92,7 @@ public class ConvidadoDao {
 					
 			declaracaoComando = (PreparedStatement)conexaoRecebida.prepareStatement(comandoSqlDeletar); //Preparação do comando recebendo o banco com o comando sql
 				
-			declaracaoComando.setString(4, convite);
+			declaracaoComando.setString(1, cpf);
 				
 			declaracaoComando.execute();
 					
