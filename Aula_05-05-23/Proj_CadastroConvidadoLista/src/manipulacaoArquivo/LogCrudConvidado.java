@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import entidades.Convidado;
 import persistencia.LogDao;
@@ -12,7 +13,11 @@ public class LogCrudConvidado {
 	
 	public void gravarArquivoLogConvidado(Convidado convidado, String tipoDeOperacao) {
 		
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+		
 		LogDao logDao = new LogDao();
+		
 		LocalDateTime horaAtual = LocalDateTime.now(); //Inserindo hora do sistema no log                       
 		
 		String enderecoLog = "D:\\Repositorio_GitHub\\Meu_Repositorio\\CursoJavaProgrammer\\Aula_05-05-23\\Proj_CadastroConvidadoLista\\ArquivoDeLogs\\logsConvidados.txt";
@@ -21,15 +26,15 @@ public class LogCrudConvidado {
 		switch (tipoDeOperacao) {
 		
 			case  "Deletar":
-				escrita = horaAtual + " -- O convidado " + convidado.getNome() + " que tem o CPF "+ convidado.getCpf() + "foi excluido!";
+				escrita = horaAtual.format(formatter) + " -- O convidado " + convidado.getNome() + " que tem o CPF "+ convidado.getCpf() + "foi excluido!";
 				break;
 			
 			case  "Alterar":
-				escrita = horaAtual + " -- O convidado " + convidado.getNome() + " que tem o CPF "+ convidado.getCpf() + " foi alterado!";
+				escrita = horaAtual.format(formatter) + " -- O convidado " + convidado.getNome() + " que tem o CPF "+ convidado.getCpf() + " foi alterado!";
 				break;
 			
 			case  "Cadastrar":
-				escrita = horaAtual + " -- O convidado " + convidado.getNome() + " que tem o CPF "+ convidado.getCpf() + " foi cadastrado!" ;
+				escrita = horaAtual.format(formatter) + " -- O convidado " + convidado.getNome() + " que tem o CPF "+ convidado.getCpf() + " foi cadastrado!" ;
 				break;		
 		}
 		

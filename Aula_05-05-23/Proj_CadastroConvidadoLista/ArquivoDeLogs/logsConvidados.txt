@@ -50,3 +50,11 @@
 ------ INFORMAÇÕES DOS LOGS ------
 2023-05-25T23:11:32.900541 -- O convidado Gabriela Martins que tem o CPF 16217957051 foi alterado!
 
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-26T20:48:09.517377900 -- O convidado JOANA SILVA OLIVEIRA que tem o CPF 67421540040 foi alterado!
+
+
+------ INFORMAÇÕES DOS LOGS ------
+2023-05-26T20:58:01.812470700 -- O convidado JOANA SILVA OLIVEIRA que tem o CPF 67421540040foi excluido!
+

@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
+import entidades.Usuario;
 import repositorio.RepositorioConvidado;
 import telas.TelaCadastroConvidado;
 import telas.TelaDeletarConvidados;
@@ -17,14 +18,16 @@ public class ControladorTelaMenuPrincipal implements ActionListener {
 
 	JFrame frameTelaMenuPrincipal;
 	JTextField textRespostaTelaMenuPrincipal;
+	Usuario usuarioEncontradoRecebida;
 	
-	public ControladorTelaMenuPrincipal(JFrame frameTelaMenuPrincipal, JTextField textRespostaTelaMenuPrincipal) {
-	
+	public ControladorTelaMenuPrincipal(JFrame frameTelaMenuPrincipal, JTextField textRespostaTelaMenuPrincipal,
+			Usuario usuarioEncontradoRecebida) {
+		
 		this.frameTelaMenuPrincipal = frameTelaMenuPrincipal;
 		this.textRespostaTelaMenuPrincipal = textRespostaTelaMenuPrincipal;
-		
+		this.usuarioEncontradoRecebida = usuarioEncontradoRecebida;
 	}
-	
+
 	TelaCadastroConvidado telaCadastroConvidado = new TelaCadastroConvidado();
 	
 	TelaListarConvidados telaListarConvidados = new TelaListarConvidados();

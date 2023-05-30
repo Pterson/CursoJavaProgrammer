@@ -1,13 +1,17 @@
 package principal;
 
-import telas.TelaMenuPrincipal;
+import telas.TelaLogin;
 
 public class Principal {
 
 	public static void main(String[] args) {
+		
+		TelaLogin telaLogin = new TelaLogin();
+		telaLogin.iniciarTelaLogin();
+		
 				
-	TelaMenuPrincipal telaMenuPrincipal = new TelaMenuPrincipal();
-		telaMenuPrincipal.menuPrincipal(); 
+	/*TelaMenuPrincipal telaMenuPrincipal = new TelaMenuPrincipal();
+		telaMenuPrincipal.menuPrincipal(); */
 		
 		
 		/*	------- FASE DE TESTE -------

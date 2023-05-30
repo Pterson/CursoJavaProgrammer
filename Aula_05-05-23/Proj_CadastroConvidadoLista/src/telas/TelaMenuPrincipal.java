@@ -9,10 +9,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import controladores.ControladorTelaMenuPrincipal;
+import entidades.Usuario;
 
 public class TelaMenuPrincipal {
 	
-	public void menuPrincipal() {
+	public void menuPrincipal(Usuario usuarioEncontrado) {
 		
 		
 		String opcao1 = "1. Para Cadastrar";
@@ -33,6 +34,9 @@ public class TelaMenuPrincipal {
 		GridLayout grid = new GridLayout (0,1);
 		panelTelaMenuPrincipal.setLayout(grid);
 		
+		
+		JLabel labelUsuario = new JLabel("Olá " + usuarioEncontrado.getNome());
+		panelTelaMenuPrincipal.add(labelUsuario);		
 		
 		JLabel labelOpcao1 = new JLabel(opcao1);
 		panelTelaMenuPrincipal.add(labelOpcao1);
@@ -58,7 +62,7 @@ public class TelaMenuPrincipal {
 		frameTelaMenuPrincipal.add(panelTelaMenuPrincipal);
 		frameTelaMenuPrincipal.setVisible(true);
 		
-		ControladorTelaMenuPrincipal controladorTelaMenuPrincipal = new ControladorTelaMenuPrincipal(frameTelaMenuPrincipal, textRespostaTelaMenuPrincipal);
+		ControladorTelaMenuPrincipal controladorTelaMenuPrincipal = new ControladorTelaMenuPrincipal(frameTelaMenuPrincipal, textRespostaTelaMenuPrincipal, usuarioEncontrado);
 		buttonEnviarTelaMenuPrincipal.addActionListener(controladorTelaMenuPrincipal);
 	}
 

@@ -76,7 +76,7 @@ public class ConvidadoDao {
 	}
 	
 	
-	public boolean deletarConvidadoCpf(String cpf) {
+	public boolean deletarConvidadoCpf(Convidado convidado) {
 		
 		FabricaConexao fabricaConexao = new FabricaConexao();
 		boolean exclusao = false; // Resposta do metodo
@@ -92,12 +92,14 @@ public class ConvidadoDao {
 					
 			declaracaoComando = (PreparedStatement)conexaoRecebida.prepareStatement(comandoSqlDeletar); //Preparação do comando recebendo o banco com o comando sql
 				
-			declaracaoComando.setString(1, cpf);
+			declaracaoComando.setString(1, convidado.getCpf());
 				
 			declaracaoComando.execute();
 					
 			exclusao = true;
 			System.out.println("Convidado Deletado!");
+			logCrudConvidado.gravarArquivoLogConvidado(convidado, "Deletar");
+			
 					
 		} catch (Exception e) {
 					
