@@ -21,7 +21,7 @@ public class ValidaConvidado {
 			return mensagemErro;
 		}
 		
-		boolean validaNome = validaDadosConvidado.validaNome(convidado.getNome());
+//		boolean validaNome = validaDadosConvidado.validaNome(convidado.getNome());
 		
 //______Validando NOME
 		if (!validaDadosConvidado.validaNome(convidado.getNome())) {
